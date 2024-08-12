@@ -1,0 +1,42 @@
+/* Reset margin and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sections */
+section {
+    width: 300px;
+    height: 100px;
+}
+
+/* Home */
+#home {
+    background-color: rgb(152,111,255)
+}
+
+
+/* About */
+#about {
+    background-color: rgb(111,157,255)
+}
+
+/* Skills */
+#skills {
+    background-color: rgb(126,255,111)
+}
+
+/* Projects */
+#projects {
+    background-color: rgb(255,244,111)
+}
+
+/* Journey */
+#journey {
+    background-color: rgb(255,150,111)
+}
+
+/* Contact */
+#contact {
+    background-color: rgb(255,111,111)
+}
