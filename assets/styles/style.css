@@ -10,7 +10,7 @@
     --active: rgb(255, 65, 103);
     --text-primary: rgb(250, 250, 250);
     --text-secondary: rgb(214, 214, 214);
-    --animation-timing: 200ms ease-in-out;
+    --transition-speed: 200ms ease-in-out;
 }
 
 /* Reset margin and padding*/
@@ -24,6 +24,20 @@ body {
     font-family: "Poppins", sans-serif;
     background: var(--background);
 }
+
+/* Change scrollbar */
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--foreground);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--active);
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -42,7 +56,7 @@ p {
 /* TRANSITION */
 
 a, .btn {
-    transition: all 300ms ease;
+    transition: var(--transition-speed);
 }
 
 
@@ -58,7 +72,7 @@ a, .btn {
     border-bottom: 2px solid var(--border);
     top: 0;
     width: 100%;
-    transition: var(--animation-timing);
+    transition: height var(--transition-speed);
 }
 
 /* Title */
@@ -72,7 +86,12 @@ a, .btn {
     cursor: default;
 }
 
+
 /* Navbar Links */
+.navbar-links {
+    transition: height var(--transition-speed);
+}
+
 .navbar-links ul {
     margin: 0;
     padding: 0;
@@ -97,8 +116,9 @@ a, .btn {
 }
 
 .navbar-links.active {
-    display: flex;
+    display: block;
 }
+
 
 /* Hamburger */
 .hamburger-menu {
@@ -106,7 +126,6 @@ a, .btn {
     padding: 1rem;
     position: relative;
 }
-
 
 .hamburger-btn {
     position: relative;
@@ -124,7 +143,7 @@ a, .btn {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: var(--animation-timing);
+    transition: var(--transition-speed);
 }
 
 .hamburger-btn span:nth-child(1) {
@@ -144,6 +163,7 @@ a, .btn {
 /* hamburger menu change to X when active */
 .hamburger-btn.active .bar:nth-child(1) {
     top: 50%;
+    /* rotate and move bar in x, y position */
     transform: translate(-50%, -50%) rotate(45deg);
     background: var(--active);
 }
@@ -155,7 +175,6 @@ a, .btn {
 
 .hamburger-btn.active .bar:nth-child(3) {
     top: 50%;
-    /* width: cal(); */
     transform: translate(-50%, -50%) rotate(-45deg);
     background: var(--active);
 }
