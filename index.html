@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/mediaqueries.css" />
   </head>
+
   <body>
-    <!-- Desktop Nav Bar -->
-    <nav id="desktop-nav">
-      <div class="logo">Danaya Chusuwan</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-info">
+        <div class="title">Danaya Chusuwan</div>
+        <!-- Hamburger Meus -->
+        <div class="hamburger-menu">
+          <a href="#" class="hamburger-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+        </div>
+      </div>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -25,26 +36,6 @@
       </div>
     </nav>
 
-    <!-- Hamburger Nav Bar -->
-    <nav id="hamburger-nav">
-      <div class="logo">Danaya Chusuwan</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#journey" onclick="toggleMenu()">Journey</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

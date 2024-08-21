@@ -5,6 +5,7 @@
 
 /* Reset margin and padding*/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -38,106 +39,76 @@ a, .btn {
 
 /* NAVIGATION */
 
-a {
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-    text-decoration-color: rgb(250, 250, 250);
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(43, 43, 44);
+    border-bottom: 2px solid rgb(56, 56, 56);
+    top: 0;
+    width: 100%;
+    /* height: 10vh; */
 }
 
-a:hover {
-    color: rgb(194, 194, 194);
-}
-
-.logo {
+.title {
+    padding: 1rem;
     color: rgb(250, 250, 250);
     font-size: 1.5rem;
 }
 
-.logo:hover {
+.title:hover {
     cursor: default;
 }
 
-
-/* Desktop Nav */
-
-nav, .nav-links {
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
-nav {
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(43, 43, 44);
-    border-bottom: 2px solid rgb(56, 56, 56);
-}
-
-.nav-links{
-    gap: 2rem;
+.navbar-links li {
     list-style: none;
+}
+
+.navbar-links a {
+    display: block;
+    padding: 1rem;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
     font-size: 1rem;
+    /* text-decoration-color: rgb(250, 250, 250); */
 }
 
+.navbar-links a:hover {
+    color: rgb(223, 149, 163);
+    /* color: rgb(255, 65, 103); */
+}
 
-/* Hamburger Nav */
-
-#hamburger-nav {
+.hamburger-btn {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
     display: none;
-}
-
-.hamburger-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.hamburger-icon {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20px;
-    width: 26px;
-    cursor: pointer;
+    width: 30px;
+    height: 21px;
 }
 
-.hamburger-icon span {
+.hamburger-btn .bar {
+    height: 3px;
     width: 100%;
-    height: 2.5px;
     background-color: rgb(250, 250, 250);
-    transition: all 0.3 ease-in-out;
+    border-radius: 15px;
+} 
+
+.hamburger-btn:hover {
+    .bar {
+        background-color: rgb(223, 149, 163);
+    } 
 }
 
-.menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: rgb(250, 250, 250);
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-    list-style: none;
-}
-
-.menu-links.open {
-    max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate (10px, 5px);
-}
 
 
 
