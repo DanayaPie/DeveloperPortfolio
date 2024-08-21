@@ -2,6 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
+:root {
+    --background: rgb(30,30,31);
+    --foreground: rgb(43, 43, 44);
+    --border: rgb(56, 56, 56);
+    --hover: rgb(223, 149, 163);
+    --active: rgb(255, 65, 103);
+    --text-primary: rgb(250, 250, 250);
+    --text-secondary: rgb(214, 214, 214);
+    --animation-timing: 200ms ease-in-out;
+}
 
 /* Reset margin and padding*/
 * {
@@ -12,7 +22,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: rgb(30,30,31);
+    background: var(--background);
 }
 
 html {
@@ -20,11 +30,11 @@ html {
 }
 
 h1, h2, h3, h4 {
-    color: rgb(250, 250, 250);
+    color: var(--text-primary)
 }
 
 p {
-    color: rgb(214, 214, 214);
+    color: var(--text-secondary);
 }
 
 
@@ -44,15 +54,17 @@ a, .btn {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    background-color: rgb(43, 43, 44);
-    border-bottom: 2px solid rgb(56, 56, 56);
+    background: var(--foreground);
+    border-bottom: 2px solid var(--border);
     top: 0;
     width: 100%;
+    transition: var(--animation-timing);
 }
 
+/* Title */
 .title {
     padding: 1rem;
-    color: rgb(250, 250, 250);
+    color: var(--text-primary);
     font-size: 1.5rem;
 }
 
@@ -60,6 +72,7 @@ a, .btn {
     cursor: default;
 }
 
+/* Navbar Links */
 .navbar-links ul {
     margin: 0;
     padding: 0;
@@ -68,30 +81,36 @@ a, .btn {
 
 .navbar-links li {
     list-style: none;
+
 }
 
 .navbar-links a {
     display: block;
     padding: 1rem;
-    color: rgb(250, 250, 250);
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
 }
 
 .navbar-links a:hover {
-    color: rgb(223, 149, 163);
-    /* color: rgb(255, 65, 103); */
+    color: var(--hover);
 }
 
+.navbar-links.active {
+    display: flex;
+}
+
+/* Hamburger */
 .hamburger-menu {
     display: none;
     padding: 1rem;
+    position: relative;
 }
 
+
 .hamburger-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    margin-left: auto;
     width: 30px;
     height: 21px;
 }
@@ -99,16 +118,47 @@ a, .btn {
 .hamburger-btn .bar {
     height: 3px;
     width: 100%;
-    background-color: rgb(250, 250, 250);
+    background: var(--text-primary);
     border-radius: 15px;
-} 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--animation-timing);
+}
+
+.hamburger-btn span:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger-btn span:nth-child(3) {
+    top: 75%;
+}
 
 .hamburger-btn:hover {
     .bar {
-        background-color: rgb(223, 149, 163);
+        background: var(--hover);
     } 
 }
 
+/* hamburger menu change to X when active */
+.hamburger-btn.active .bar:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--active);
+}
+
+.hamburger-btn.active .bar:nth-child(2) {
+    transform: opacity(0);
+    width: 0;
+}
+
+.hamburger-btn.active .bar:nth-child(3) {
+    top: 50%;
+    /* width: cal(); */
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background: var(--active);
+}
 
 
 
@@ -120,30 +170,30 @@ section {
 
 /* Home */
 #home {
-    background-color: rgb(152,111,255)
+    background: rgb(152,111,255)
 }
 
 /* About */
 #about {
-    background-color: rgb(111,157,255)
+    background: rgb(111,157,255)
 }
 
 /* Skills */
 #skills {
-    background-color: rgb(126,255,111)
+    background: rgb(126,255,111)
 }
 
 /* Projects */
 #projects {
-    background-color: rgb(255,244,111)
+    background: rgb(255,244,111)
 }
 
 /* Journey */
 #journey {
-    background-color: rgb(255,150,111)
+    background: rgb(255,150,111)
 }
 
 /* Contact */
 #contact {
-    background-color: rgb(255,111,111)
+    background: rgb(255,111,111)
 }

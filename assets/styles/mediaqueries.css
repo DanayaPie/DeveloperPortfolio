@@ -32,8 +32,4 @@
     .navbar-links a {
         padding: .5rem 1rem;
     }
-
-    .navbar-links.active {
-        display: flex;
-    }
 }
