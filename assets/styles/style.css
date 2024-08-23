@@ -5,7 +5,7 @@
 :root {
     --background: rgb(30,30,31);
     --foreground: rgb(43, 43, 44);
-    --border: rgb(56, 56, 56);
+    --border: rgb(68, 68, 68);
     --highlight-primary: rgb(219, 64, 64, 0.959);
     --highlight-secondary: rgb(223, 149, 149);
     --text-primary: rgb(250, 250, 250);
@@ -76,32 +76,33 @@ a, .btn {
 
 /* General Nav */
 nav {
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
-    background: var(--foreground);
-    border-bottom: 2px solid var(--border);
     top: 0;
-    height: 10vh;
     width: 100%;
 }
 
-/* Navbar */
-.navbar {
+.nav-info {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background: var(--foreground);
+    border-bottom: 2px solid var(--border);
 }
 
+
+/* Full Nav */
 .navbar-links {
-    display: block;
-}
-
-.navbar-links li {
+    display: flex;
+    margin: 0;
+    padding: 1rem;
+    gap: 2rem;
     list-style: none;
 }
 
 .navbar-links a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
@@ -111,44 +112,37 @@ nav {
     color: var(--highlight-secondary);
 }
 
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
+
+
+/* Full Nav */
+.navbar-links {
     display: flex;
 }
 
 
-
 /* Hamburger Nav */
-.hamburger-nav {
+#hamburger-nav {
     display: none;
 }
 
+
 /* Hamburger Menu */
 .hamburger-menu {
-    display: block;
-    padding: 1rem;
     position: relative;
-    align-items: center;
+    display: inline-block;
+    padding: 1rem;
 }
-
-.hamburger-links ul {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
 .hamburger-btn {
     position: relative;
+    flex-direction: column;
     margin-left: auto;
-    width: 30px;
+    width: 31px;
     height: 21px;
+    cursor: pointer;
 }
 
 .hamburger-btn .bar {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: var(--text-primary);
     border-radius: 15px;
@@ -159,14 +153,12 @@ nav {
     transition: var(--transition-speed);
 }
 
-.hamburger-btn span:nth-child(1) {
+.hamburger-btn .bar:nth-child(1) {
     top: 25%;
 }
-
-.hamburger-btn span:nth-child(3) {
+.hamburger-btn .bar:nth-child(3) {
     top: 75%;
 }
-
 .hamburger-btn:hover {
     .bar {
         background: var(--highlight-secondary);
@@ -174,23 +166,60 @@ nav {
 }
 
 /* hamburger menu change to X when active */
-.hamburger-btn.active .bar:nth-child(1) {
+.hamburger-btn.open .bar:nth-child(1) {
     top: 50%;
     /* rotate and move bar in x, y position */
     transform: translate(-50%, -50%) rotate(45deg);
     background: var(--highlight-secondary);
 }
-
-.hamburger-btn.active .bar:nth-child(2) {
+.hamburger-btn.open .bar:nth-child(2) {
     transform: opacity(0);
     width: 0;
 }
-
-.hamburger-btn.active .bar:nth-child(3) {
+.hamburger-btn.open .bar:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
     background: var(--highlight-secondary);
 }
+
+/* Hamburger Links */
+.hamburger-links {
+    position: absolute;  
+    top: 100%;
+    width: 100%;
+    max-height: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: var(--transition-speed);
+}
+
+.hamburger-links a {
+    display: block;
+    padding: .5rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition-speed);
+    text-align: center;
+}
+
+.hamburger-links li {
+    list-style: none;
+}
+
+.hamburger-links a:hover {
+    color: var(--highlight-secondary);
+}
+
+/* open hamburger links */
+.hamburger-links.open {
+    max-height: 300px;
+    background: var(--foreground);
+    border-bottom: 2px solid var(--border);
+    /* opacity: 80%; */
+}
+
 
 
 
