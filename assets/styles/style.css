@@ -6,22 +6,27 @@
     --background: rgb(30,30,31);
     --foreground: rgb(43, 43, 44);
     --border: rgb(56, 56, 56);
-    --hover: rgb(223, 149, 163);
-    --active: rgb(255, 65, 103);
+    --highlight-primary: rgb(219, 64, 64, 0.959);
+    --highlight-secondary: rgb(223, 149, 149);
     --text-primary: rgb(250, 250, 250);
-    --text-secondary: rgb(214, 214, 214);
+    --text-secondary: rgb(199, 199, 199);
     --transition-speed: 200ms ease-in-out;
 }
 
 /* Reset margin and padding*/
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    padding-top: 70px;
     background: var(--background);
 }
 
@@ -35,12 +40,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--active);
-}
-
-
-html {
-    scroll-behavior: smooth;
+    background: var(--highlight-secondary);
 }
 
 h1, h2, h3, h4 {
@@ -63,18 +63,6 @@ a, .btn {
 
 /* NAVIGATION */
 
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    background: var(--foreground);
-    border-bottom: 2px solid var(--border);
-    top: 0;
-    width: 100%;
-    transition: height var(--transition-speed);
-}
-
 /* Title */
 .title {
     padding: 1rem;
@@ -86,21 +74,29 @@ a, .btn {
     cursor: default;
 }
 
-
-/* Navbar Links */
-.navbar-links {
-    transition: height var(--transition-speed);
+/* General Nav */
+nav {
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: var(--foreground);
+    border-bottom: 2px solid var(--border);
+    top: 0;
+    height: 10vh;
+    width: 100%;
 }
 
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
+/* Navbar */
+.navbar {
     display: flex;
+}
+
+.navbar-links {
+    display: block;
 }
 
 .navbar-links li {
     list-style: none;
-
 }
 
 .navbar-links a {
@@ -112,20 +108,37 @@ a, .btn {
 }
 
 .navbar-links a:hover {
-    color: var(--hover);
+    color: var(--highlight-secondary);
 }
 
-.navbar-links.active {
-    display: block;
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 
-/* Hamburger */
-.hamburger-menu {
+
+/* Hamburger Nav */
+.hamburger-nav {
     display: none;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: block;
     padding: 1rem;
     position: relative;
+    align-items: center;
 }
+
+.hamburger-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 
 .hamburger-btn {
     position: relative;
@@ -156,7 +169,7 @@ a, .btn {
 
 .hamburger-btn:hover {
     .bar {
-        background: var(--hover);
+        background: var(--highlight-secondary);
     } 
 }
 
@@ -165,7 +178,7 @@ a, .btn {
     top: 50%;
     /* rotate and move bar in x, y position */
     transform: translate(-50%, -50%) rotate(45deg);
-    background: var(--active);
+    background: var(--highlight-secondary);
 }
 
 .hamburger-btn.active .bar:nth-child(2) {
@@ -176,7 +189,7 @@ a, .btn {
 .hamburger-btn.active .bar:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    background: var(--active);
+    background: var(--highlight-secondary);
 }
 
 
@@ -184,7 +197,7 @@ a, .btn {
 /* Sections */
 section {
     width: 300px;
-    height: 100px;
+    height: 500px;
 }
 
 /* Home */
