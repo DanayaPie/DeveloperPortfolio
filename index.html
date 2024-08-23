@@ -31,7 +31,7 @@
         <div class="title">Danaya Chusuwan</div>
         <div class="hamburger-menu">
           <!-- Link html to js function -->
-          <div class="hamburger-btn" onclick="hamburgerMenu()">
+          <div class="hamburger-btn" onclick="toggleHamburgerMenu()">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -39,12 +39,14 @@
         </div>
       </div>
       <ul class="hamburger-links">
-        <li><a href="#" onclick="hamburgerMenu()">Home</a></li>
-        <li><a href="#about" onclick="hamburgerMenu()">About</a></li>
-        <li><a href="#skills" onclick="hamburgerMenu()">Skills</a></li>
-        <li><a href="#projects" onclick="hamburgerMenu()">Projects</a></li>
-        <li><a href="#journey" onclick="hamburgerMenu()">Journey</a></li>
-        <li><a href="#contact" onclick="hamburgerMenu()">Contact</a></li>
+        <li><a href="#" onclick="toggleHamburgerMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleHamburgerMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleHamburgerMenu()">Skills</a></li>
+        <li>
+          <a href="#projects" onclick="toggleHamburgerMenu()">Projects</a>
+        </li>
+        <li><a href="#journey" onclick="toggleHamburgerMenu()">Journey</a></li>
+        <li><a href="#contact" onclick="toggleHamburgerMenu()">Contact</a></li>
       </ul>
     </nav>
     <main>
