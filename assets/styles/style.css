@@ -64,13 +64,13 @@ a, .btn {
 /* NAVIGATION */
 
 /* Title */
-.title {
+.nav-title {
     padding: 1rem;
     color: var(--text-primary);
     font-size: 1.5rem;
 }
 
-.title:hover {
+.nav-title:hover {
     cursor: default;
 }
 
