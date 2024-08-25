@@ -5,5 +5,13 @@
 
     #hamburger-nav {
         display: flex;
-    } 
+    }
+
+    main {
+        margin: 0 10rem;
+    }
+
+    section {
+        max-width: 80vw;
+    }
 }

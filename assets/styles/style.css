@@ -9,9 +9,11 @@
     --highlight-primary: rgb(219, 64, 64, 0.959);
     --highlight-secondary: rgb(223, 149, 149);
     --text-primary: rgb(250, 250, 250);
-    --text-secondary: rgb(199, 199, 199);
+    --text-secondary: rgb(197, 144, 144);
+    --text-tertiary: rgb(206, 206, 206);
     --transition-speed: 200ms ease-in-out;
 }
+
 
 /* Reset margin and padding*/
 * {
@@ -21,12 +23,14 @@
     font-family: "Poppins", sans-serif;
 }
 
+
+/* Scroll behavior */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    padding-top: 70px;
+    /* padding-top: 70px; */
     background: var(--background);
 }
 
@@ -43,18 +47,28 @@ body::-webkit-scrollbar-thumb {
     background: var(--highlight-secondary);
 }
 
-h1, h2, h3, h4 {
+
+/* Font Tags */
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
     color: var(--text-primary)
 }
 
+h2, h3, h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--text-secondary)
+}
+
 p {
-    color: var(--text-secondary);
+    font-size: 1rem;
+    color: var(--text-tertiary);
 }
 
 
 
 /* TRANSITION */
-
 a, .btn {
     transition: var(--transition-speed);
 }
@@ -62,17 +76,6 @@ a, .btn {
 
 
 /* NAVIGATION */
-
-/* Title */
-.nav-title {
-    padding: 1rem;
-    color: var(--text-primary);
-    font-size: 1.5rem;
-}
-
-.nav-title:hover {
-    cursor: default;
-}
 
 /* General Nav */
 nav {
@@ -90,6 +93,18 @@ nav {
     border-bottom: 2px solid var(--border);
 }
 
+/* Title */
+.nav-title {
+    padding: 1rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.nav-title:hover {
+    cursor: default;
+}
+
+
 
 /* Full Nav */
 .navbar-links {
@@ -103,19 +118,13 @@ nav {
 .navbar-links a {
     display: block;
     padding: 0.5rem;
+    font-size: 1rem;
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 1rem;
 }
 
 .navbar-links a:hover {
     color: var(--highlight-secondary);
-}
-
-
-/* Full Nav */
-.navbar-links {
-    display: flex;
 }
 
 
@@ -129,7 +138,8 @@ nav {
 .hamburger-menu {
     position: relative;
     display: inline-block;
-    padding: 1rem;
+    margin: 0;
+    padding: 1.5rem;
 }
 
 .hamburger-btn {
@@ -137,7 +147,7 @@ nav {
     flex-direction: column;
     margin-left: auto;
     width: 31px;
-    height: 21px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -156,9 +166,11 @@ nav {
 .hamburger-btn .bar:nth-child(1) {
     top: 25%;
 }
+
 .hamburger-btn .bar:nth-child(3) {
     top: 75%;
 }
+
 .hamburger-btn:hover {
     .bar {
         background: var(--highlight-secondary);
@@ -172,10 +184,12 @@ nav {
     transform: translate(-50%, -50%) rotate(45deg);
     background: var(--highlight-secondary);
 }
+
 .hamburger-btn.active .bar:nth-child(2) {
     transform: opacity(0);
     width: 0;
 }
+
 .hamburger-btn.active .bar:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
@@ -197,11 +211,11 @@ nav {
 .hamburger-links a {
     display: block;
     padding: .5rem;
-    color: var(--text-primary);
-    font-size: 1rem;
-    text-decoration: none;
     transition: var(--transition-speed);
     text-align: center;
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 .hamburger-links li {
@@ -222,4 +236,110 @@ nav {
 
 
 
+/* SECTIONS */
 
+/* General Section */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
+    margin: 0 20rem;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    min-height: fit-content;
+    max-width: 50vw;
+    box-sizing: border-box;
+    align-items: center;
+    align-items: center;
+}
+
+
+/* Home Section */
+
+/* Texts */
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_pic-container {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 3rem;
+}
+
+.section_text {
+    align-self: center;
+    text-align: center;
+}
+
+.section_title, .section_title2 {
+    margin-bottom: 1rem;
+}
+
+.section_text_p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+/* Buttons */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+
+/* Logos */
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.logo {
+    height: 2rem;
+    cursor: pointer;
+}
+
+
+
+
+/* About */
+#about {
+    background: rgb(111,157,255);
+}
+/* Skills */
+#skills {
+    background: rgb(126,255,111)
+}
+/* Projects */
+#projects {
+    background: rgb(255,244,111)
+}
+/* Journey */
+#journey {
+    background: rgb(255,150,111)
+}
+/* Contact */
+#contact {
+    background: rgb(255,111,111)
+}
