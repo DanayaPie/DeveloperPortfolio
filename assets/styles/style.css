@@ -113,7 +113,6 @@ nav {
 }
 
 
-
 /* Full Nav */
 .navbar-links {
     display: flex;
@@ -132,6 +131,7 @@ nav {
     display: inline-block;
     padding: 1rem;
 }
+
 .hamburger-btn {
     position: relative;
     flex-direction: column;
@@ -223,38 +223,3 @@ nav {
 
 
 
-/* Sections */
-section {
-    width: 300px;
-    height: 500px;
-}
-
-/* Home */
-#home {
-    background: rgb(152,111,255)
-}
-
-/* About */
-#about {
-    background: rgb(111,157,255)
-}
-
-/* Skills */
-#skills {
-    background: rgb(126,255,111)
-}
-
-/* Projects */
-#projects {
-    background: rgb(255,244,111)
-}
-
-/* Journey */
-#journey {
-    background: rgb(255,150,111)
-}
-
-/* Contact */
-#contact {
-    background: rgb(255,111,111)
-}
