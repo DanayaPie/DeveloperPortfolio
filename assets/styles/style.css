@@ -244,12 +244,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15vh;
+    padding-top: 75px;
     margin: 0 20rem;
 }
 
 section {
     display: flex;
+    padding-top: 5vh;
     height: 100vh;
     min-height: fit-content;
     max-width: 50vw;
@@ -258,7 +259,13 @@ section {
     align-items: center;
 }
 
-
+.separator {
+    display: flex;
+    margin-top: 3rem;
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--background), var(--border), var(--background));
+}
 
 
 /* Home Section */
