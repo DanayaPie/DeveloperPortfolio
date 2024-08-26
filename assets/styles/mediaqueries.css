@@ -7,11 +7,11 @@
         display: flex;
     }
 
-    main {
+    .parent-section {
         margin: 0 10rem;
     }
 
-    section {
+    .child-section {
         max-width: 80vw;
     }
 }
