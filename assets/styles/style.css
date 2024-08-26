@@ -259,6 +259,8 @@ section {
 }
 
 
+
+
 /* Home Section */
 
 /* Texts */
@@ -272,6 +274,11 @@ section {
     height: 300px;
     width: 300px;
     margin-bottom: 3rem;
+
+    /* make width of img fit div container - need for Chrome */
+    img {
+        width: 100%;
+    }
 }
 
 .section_text {
@@ -279,12 +286,12 @@ section {
     text-align: center;
 }
 
-.section_title, .section_title2 {
+.section_title, .section_title-2 {
     margin-bottom: 1rem;
 }
 
 .section_text_p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: left;
 }
 
@@ -294,19 +301,45 @@ section {
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     gap: 1rem;
 }
 
 .btn {
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 2rem;
-    font-weight: 600;
+    padding: 0.5rem;
+    width: 7rem;
+    border-radius: 1.5rem;
+    font-weight: 500;
+    transition: var(--transition-speed);
+}
+
+.btn-color-1, .btn-color-2 {
+    border-style: solid;
+    border-color: var(--border);
+    cursor: pointer;
+}
+
+.btn-color-1 {
+    background-color: var(--highlight-secondary);
+}
+
+.btn-color-1:hover {
+    color: var(--highlight-secondary);
+    background-color: var(--foreground);
+}
+
+.btn-color-2 {
+    color: var(--text-primary);
+    background-color: var(--background);
+}
+
+.btn-color-2:hover {
+    color: var(--highlight-secondary);
+    background-color: var(--foreground);
 }
 
 
-/* Logos */
+/* Social / Logo */
 
 #social-container {
     display: flex;
