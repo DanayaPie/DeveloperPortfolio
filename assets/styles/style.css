@@ -107,7 +107,7 @@ nav {
 
 
 /* Full Nav */
-.navbar-links {
+.full-nav-links {
     display: flex;
     margin: 0;
     padding: 1rem;
@@ -115,7 +115,7 @@ nav {
     list-style: none;
 }
 
-.navbar-links a {
+.full-nav-links a {
     display: block;
     padding: 0.5rem;
     font-size: 1rem;
@@ -124,11 +124,11 @@ nav {
     text-decoration: none;
 }
 
-.navbar-links a:hover {
+.full-nav-links a:hover {
     color: var(--highlight-secondary);
 }
 
-.navbar-links a.active {
+.nav-links a.active {
     color: var(--highlight-primary);
     font-weight: 900;
 }
@@ -237,7 +237,6 @@ nav {
     max-height: 300px;
     background: var(--foreground);
     border-bottom: 2px solid var(--border);
-    /* opacity: 80%; */
 }
 
 
@@ -274,7 +273,7 @@ nav {
 
 
 
-/* Home Section */
+/* HOME SECTION */
 
 #home {
     display: flex;
@@ -329,7 +328,7 @@ nav {
 }
 
 
-/* Buttons */
+/* Home Section Buttons */
 
 .btn-container {
     display: flex;
@@ -393,25 +392,33 @@ nav {
 #about {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 /* Skills */
 #skills {
     display: flex;
     flex-direction: column;
+
 }
+
 /* Projects */
 #projects {
     display: flex;
     flex-direction: column;
+
 }
+
 /* Journey */
 #journey {
     display: flex;
     flex-direction: column;
+
 }
+
 /* Contact */
 #contact {
     display: flex;
     flex-direction: column;
+
 }

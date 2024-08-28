@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danaya (Pie) Chusuwan</title>
 
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+
     <!-- CSS Styles -->
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/mediaqueries.css" />
@@ -15,8 +18,8 @@
     <nav id="full-nav">
       <div class="nav-info">
         <div class="nav-title">Danaya Chusuwan</div>
-        <ul class="navbar-links">
-          <li><a href="#">Home</a></li>
+        <ul class="full-nav-links nav-links">
+          <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -38,9 +41,15 @@
           </div>
         </div>
       </div>
-      <ul class="hamburger-links">
-        <li><a href="#" onclick="toggleHamburgerMenu()">Home</a></li>
-        <li><a href="#about" onclick="toggleHamburgerMenu()">About</a></li>
+      <ul class="hamburger-links nav-links">
+        <li>
+          <a href="#home" class="active" onclick="toggleHamburgerMenu()"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#about" onclick="toggleHamburgerMenu()">About</a>
+        </li>
         <li><a href="#skills" onclick="toggleHamburgerMenu()">Skills</a></li>
         <li>
           <a href="#projects" onclick="toggleHamburgerMenu()">Projects</a>
@@ -118,7 +127,5 @@
         <h3>Contact</h3>
       </section>
     </section>
-
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
