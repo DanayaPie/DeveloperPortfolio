@@ -15,7 +15,8 @@ function toggleHamburgerMenu() {
     }
 };
 
-// Mark Nav Links as 'active' when click or scroll to each section
+
+// Mark nav-links as 'active' when click or scroll to each section
 document.addEventListener("DOMContentLoaded", function () {
 
     let sections = document.querySelectorAll('.child-section');
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     links.classList.remove('active');
                     document.querySelector('.nav-links a[href*=' + id + ']').classList.add('active');
+                    document.querySelector('.hamburger-links a[href*=' + id + ']').classList.add('active');
                 });
             };
 

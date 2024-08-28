@@ -128,6 +128,7 @@ nav {
     color: var(--highlight-secondary);
 }
 
+/* nav-links */
 .nav-links a.active {
     color: var(--highlight-primary);
     font-weight: 900;
@@ -254,7 +255,7 @@ nav {
 
 .child-section {
     display: flex;
-    padding-top: calc(75px + 5vh);
+    padding-top: calc(75px + 3rem);
     padding-bottom: 3rem;
     height: fit-content;
     min-height: fit-content;
