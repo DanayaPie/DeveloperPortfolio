@@ -80,6 +80,7 @@ a, .btn {
 /* General Nav */
 nav {
     position: fixed;
+    z-index: 100;
     top: 0;
     width: 100%;
 }
@@ -105,7 +106,6 @@ nav {
 }
 
 
-
 /* Full Nav */
 .navbar-links {
     display: flex;
@@ -119,12 +119,18 @@ nav {
     display: block;
     padding: 0.5rem;
     font-size: 1rem;
+    font-weight: 400;
     color: var(--text-primary);
     text-decoration: none;
 }
 
 .navbar-links a:hover {
     color: var(--highlight-secondary);
+}
+
+.navbar-links a.active {
+    color: var(--highlight-primary);
+    font-weight: 900;
 }
 
 
@@ -254,7 +260,6 @@ nav {
     height: fit-content;
     min-height: fit-content;
     max-width: 50vw;
-    box-sizing: border-box;
     align-items: center;
 }
 
@@ -380,8 +385,6 @@ nav {
     cursor: pointer;
 }
 
-
-/* Separator */
 
 
 
