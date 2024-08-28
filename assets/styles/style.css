@@ -265,7 +265,7 @@ nav {
 .child-section::after {
     position: relative;
     content: "";
-    bottom: -3rem;
+    bottom: -4rem;
     height: 2px;
     width: 50%;
     background: linear-gradient(to right, var(--background), var(--border), var(--background));
@@ -281,7 +281,7 @@ nav {
 }
 
 
-.home_pic-container {
+.section_pic-container {
     display: flex;
     height: 300px;
     width: 300px;
@@ -392,7 +392,6 @@ nav {
 #about {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 /* Skills */
