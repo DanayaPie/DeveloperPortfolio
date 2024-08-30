@@ -286,7 +286,6 @@ nav {
     display: flex;
     height: 300px;
     width: 300px;
-    margin-bottom: 3rem;
 
     /* make width of img fit div container - need for Chrome */
     img {
@@ -294,9 +293,13 @@ nav {
     }
 }
 
+.home_pic-container {
+    margin-bottom: 3rem;
+}
+
 /* Texts */
 
-.section_text {
+.home-container {
     align-self: center;
     text-align: center;
 }
@@ -323,7 +326,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-.section_text_p {
+.home_text_p {
     margin-bottom: 2rem;
     text-align: left;
 }
@@ -387,13 +390,55 @@ nav {
 
 
 
-
-
-/* About */
+/* ABOUT SECTION */
 #about {
     display: flex;
     flex-direction: column;
 }
+
+.about-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.about-detail-1 {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.text-container-1 {
+    height: fit-content;
+    width: 60%;
+}
+
+.about-intro {
+    color: var(--highlight-primary);
+    margin-bottom: 1rem;
+}
+
+.highlight-text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--highlight-secondary);
+}
+
+.about-detail-2 {
+    display: flex;
+    width: 100%;
+}
+
 
 /* Skills */
 #skills {

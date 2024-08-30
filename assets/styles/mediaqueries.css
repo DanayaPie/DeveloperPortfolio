@@ -14,4 +14,16 @@
     .child-section {
         max-width: 80vw;
     }
+
+    .about-detail-1 {
+        flex-direction: column;
+    }
+
+    .about_pic-container {
+        align-self: center;
+    }
+
+    .text-container-1 {
+        width: 100%;
+    }
 }
