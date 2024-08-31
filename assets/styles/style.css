@@ -343,16 +343,18 @@ nav {
 
 .btn {
     padding: 0.5rem;
-    width: 7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: fit-content;
     border-radius: 1.5rem;
     font-weight: 500;
+    cursor: pointer;
     transition: var(--transition-speed);
 }
 
 .btn-color-1, .btn-color-2 {
     border-style: solid;
     border-color: var(--border);
-    cursor: pointer;
 }
 
 .btn-color-1 {
@@ -405,6 +407,7 @@ nav {
     align-content: center;
 }
 
+
 .about-detail-1 {
     display: flex;
     flex-direction: row;
@@ -446,20 +449,19 @@ nav {
 .read-more-container {
     display: none;
     flex-direction: column;
-    margin-bottom: 2rem;
     align-items: center;
 }
 
-:checked + .read-more-container {
-    opacity: 1;
-    display: flex;
+.read-more-btn {
+    border-style: solid;
+    border-color: var(--border);
+    color: var(--highlight-secondary);
+    background-color: var(--foreground);
 }
 
-
-.read-more-btn {
-    align-self: center;
-    margin-bottom: 2rem;
-
+.read-more-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--background);
 }
 
 .read-more-intro {
@@ -476,6 +478,18 @@ nav {
 
 .read-more-pics {
     margin-bottom: 2rem;
+}
+
+.read-less-btn {
+    border-style: solid;
+    border-color: var(--border);
+    color: var(--text-primary);
+    background-color: var(--background);
+}
+
+.read-less-btn:hover {
+    color: var(--highlight-secondary);
+    background-color: var(--foreground);
 }
 
 
