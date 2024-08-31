@@ -11,6 +11,16 @@
     --text-primary: rgb(250, 250, 250);
     --text-secondary: rgb(237, 133, 144);
     --text-tertiary: rgb(206, 206, 206);
+
+    --dark-grey: rgb(28, 27, 27);
+    --charcoal-grey: rgb(43, 43, 44);
+    --ash-grey: rgb(213, 206, 207);
+    --burgundy-red: rgb(160, 30, 39);
+    --burgundy-pink: rgb(193, 86, 102);
+    --light-pink: rgb(233, 160, 169);
+    --nude-gold: rgb(255, 204, 130);
+    --nude-grey: rgb(172, 147, 129); 
+    --pure-white: rgb(255, 255, 255);
     --transition-speed: 200ms ease-in-out;
 }
 
@@ -31,7 +41,7 @@ html {
 
 body {
     /* padding-top: 70px; */
-    background: var(--background);
+    background: var(--dark-grey);
 }
 
 /* Change scrollbar */
@@ -40,11 +50,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--foreground);
+    background: var(--dark-grey);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--highlight-secondary);
+    background: var(--nude-gold);
 }
 
 
@@ -52,18 +62,18 @@ body::-webkit-scrollbar-thumb {
 h1 {
     font-size: 3rem;
     font-weight: 400;
-    color: var(--text-primary)
+    color: var(--pure-white)
 }
 
 h2, h3, h4 {
     font-size: 2rem;
     font-weight: normal;
-    color: var(--text-secondary)
+    color: var(--burgundy-pink)
 }
 
 p {
     font-size: 1rem;
-    color: var(--text-tertiary);
+    color: var(--ash-grey);
 }
 
 
@@ -90,14 +100,14 @@ nav {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background: var(--foreground);
-    border-bottom: 2px solid var(--border);
+    background: var(--charcoal-grey);
+    border-bottom: 2px solid var(--nude-grey);
 }
 
 /* Title */
 .nav-title {
     padding: 1rem;
-    color: var(--text-primary);
+    color: var(--pure-white);
     font-size: 1.5rem;
 }
 
@@ -120,17 +130,17 @@ nav {
     padding: 0.5rem;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--pure-white);
     text-decoration: none;
 }
 
 .full-nav-links a:hover {
-    color: var(--highlight-secondary);
+    color: var(--light-pink);
 }
 
 /* nav-links */
 .nav-links a.active {
-    color: var(--highlight-primary);
+    color: var(--nude-gold);
     font-weight: 900;
 }
 
@@ -153,15 +163,15 @@ nav {
     position: relative;
     flex-direction: column;
     margin-left: auto;
-    width: 31px;
-    height: 25px;
+    width: 33px;
+    height: 30px;
     cursor: pointer;
 }
 
 .hamburger-btn .bar {
     height: 2px;
     width: 100%;
-    background: var(--text-primary);
+    background: var(--pure-white);
     border-radius: 15px;
     position: absolute;
     left: 50%;
@@ -180,7 +190,7 @@ nav {
 
 .hamburger-btn:hover {
     .bar {
-        background: var(--highlight-secondary);
+        background: var(--light-pink);
     } 
 }
 
@@ -189,7 +199,7 @@ nav {
     top: 50%;
     /* rotate and move bar in x, y position */
     transform: translate(-50%, -50%) rotate(45deg);
-    background: var(--highlight-secondary);
+    background: var(--nude-gold);
 }
 
 .hamburger-btn.active .bar:nth-child(2) {
@@ -200,7 +210,7 @@ nav {
 .hamburger-btn.active .bar:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
-    background: var(--highlight-secondary);
+    background: var(--nude-gold);
 }
 
 /* Hamburger Links */
@@ -230,14 +240,14 @@ nav {
 }
 
 .hamburger-links a:hover {
-    color: var(--highlight-secondary);
+    color: var(--light-pink);
 }
 
 /* active hamburger links */
 .hamburger-links.active {
     max-height: 300px;
-    background: var(--foreground);
-    border-bottom: 2px solid var(--border);
+    background: var(--charcoal-grey);
+    border-bottom: 2px solid var(--nude-grey);
 }
 
 
@@ -269,7 +279,7 @@ nav {
     bottom: -4rem;
     height: 2px;
     width: 50%;
-    background: linear-gradient(to right, var(--background), var(--border), var(--background));
+    background: linear-gradient(to right, var(--dark-grey), var(--nude-grey), var(--dark-grey));
 }
 
 
@@ -318,7 +328,7 @@ nav {
     left: 50%;
     margin-left: -39px;
     border-radius: 3px;
-    background: var(--highlight-primary);
+    background: var(--nude-gold);
     margin-bottom: 1rem;
 }
 
@@ -354,26 +364,27 @@ nav {
 
 .btn-color-1, .btn-color-2 {
     border-style: solid;
-    border-color: var(--border);
+    border-color: var(--nude-grey);
 }
 
 .btn-color-1 {
-    background-color: var(--highlight-secondary);
+    color: var(--dark-grey);
+    background-color: var(--light-pink);
 }
 
 .btn-color-1:hover {
-    color: var(--highlight-secondary);
+    color: var(--nude-gold);
     background-color: var(--foreground);
 }
 
 .btn-color-2 {
-    color: var(--text-primary);
-    background-color: var(--background);
+    color: var(--light-pink);
+    background-color: var(--dark-grey);
 }
 
 .btn-color-2:hover {
-    color: var(--highlight-secondary);
-    background-color: var(--foreground);
+    color: var(--nude-gold);
+    background-color: var(--charcoal-grey);
 }
 
 
@@ -428,14 +439,14 @@ nav {
 }
 
 .about-intro {
-    color: var(--highlight-primary);
+    color: var(--burgundy-pink);
     margin-bottom: 1rem;
 }
 
 .highlight-text {
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--highlight-secondary);
+    color: var(--light-pink);
 }
 
 .about-detail-2 {
@@ -454,19 +465,19 @@ nav {
 
 .read-more-btn {
     border-style: solid;
-    border-color: var(--border);
-    color: var(--highlight-secondary);
-    background-color: var(--foreground);
+    border-color: var(--nude-grey);
+    color: var(--nude-gold);
+    background-color: var(--charcoal-grey);
 }
 
 .read-more-btn:hover {
-    color: var(--text-primary);
-    background-color: var(--background);
+    color: var(--pure-white);
+    background-color: var(--charcoal-grey);
 }
 
 .read-more-intro {
     margin-top: 2rem;
-    color: var(--highlight-primary)
+    color: var(--nude-gold);
 }
 
 .read-more-detail {
@@ -476,20 +487,26 @@ nav {
     gap: 2rem;
 }
 
+.lets-connect-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--nude-gold);
+}
+
 .read-more-pics {
     margin-bottom: 2rem;
 }
 
 .read-less-btn {
     border-style: solid;
-    border-color: var(--border);
-    color: var(--text-primary);
-    background-color: var(--background);
+    border-color: var(--nude-grey);
+    color: var(--pure-white);
+    background-color: var(--charcoal-grey);
 }
 
 .read-less-btn:hover {
-    color: var(--highlight-secondary);
-    background-color: var(--foreground);
+    color: var(--nude-gold);
+    background-color: var(--charcoal-grey);
 }
 
 
