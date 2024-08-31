@@ -391,6 +391,7 @@ nav {
 
 
 /* ABOUT SECTION */
+
 #about {
     display: flex;
     flex-direction: column;
@@ -438,6 +439,45 @@ nav {
     display: flex;
     width: 100%;
 }
+
+
+
+/* READ MORE */
+.read-more-container {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+:checked + .read-more-container {
+    opacity: 1;
+    display: flex;
+}
+
+
+.read-more-btn {
+    align-self: center;
+    margin-bottom: 2rem;
+
+}
+
+.read-more-intro {
+    margin-top: 2rem;
+    color: var(--highlight-primary)
+}
+
+.read-more-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.read-more-pics {
+    margin-bottom: 2rem;
+}
+
 
 
 /* Skills */
