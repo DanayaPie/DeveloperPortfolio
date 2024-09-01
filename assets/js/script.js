@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let height = sec.offsetHeight - 200;
             let id = sec.getAttribute('id');
 
+            if (id == 'read-more') {
+                id = 'about';
+            }
+
             if (top >= offset && top < offset + height) {
                 navLinks.forEach(links => {
 
@@ -46,14 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Show/Hide Read More
 function showReadMore() {
-    document.querySelector('.read-more-container').style.display = 'flex';
-    document.querySelector('.read-more-container').style.opacity = '1';
+    document.querySelector('#read-more').style.display = 'flex';
     document.querySelector('.read-more-btn').style.display = 'none';
 }
 
 function hideReadMore() {
-    document.querySelector('.read-more-container').style.display = 'none';
+    document.querySelector('#read-more').style.display = 'none';
     document.querySelector('.read-less-btn').style.display = 'flex';
     document.querySelector('.read-more-btn').style.display = 'flex';
-
 }
