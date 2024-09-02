@@ -153,9 +153,12 @@
             </p>
           </div>
         </div>
-        <a href="#read-more" class="btn read-more-btn" onclick="showReadMore()"
-          >Read More...</a
+        <button
+          class="btn read-more-btn btn-color-2"
+          onclick="showReadMore(), location.href='./#read-more'"
         >
+          Read More...
+        </button>
       </section>
 
       <!-- Read More Section-->
@@ -202,22 +205,21 @@
             <span class="highlight-text">cat named Ashe</span>, who is friendly,
             vocal, and loves hiking.
           </p>
-          <p class="section_text_p">
-            Looking for someone who is enthusiastic about coding and always up
-            for new challenges??
-            <span class="lets-connect-text">Let's connect!</span>
-          </p>
+          <h2 class="section_text_p">Look at my cat!</h2>
         </div>
         <div class="section_pic-container">
           <img
-            src="assets/images/home/pie-white-logo.png"
+            src="assets/images/about/ashe-01.png"
             alt="More Pictures"
             class="read-more-pics"
           />
         </div>
-        <a href="#about" class="btn read-less-btn" onclick="hideReadMore()">
+        <button
+          class="btn read-less-btn btn-color-1"
+          onclick="hideReadMore(), location.href='./#about'"
+        >
           Read Less...
-        </a>
+        </button>
       </section>
 
       <!-- Skills Section -->

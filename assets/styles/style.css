@@ -9,6 +9,7 @@
     --burgundy-red: rgb(160, 30, 39);
     --burgundy-pink: rgb(193, 86, 102);
     --light-pink: rgb(233, 160, 169);
+    --dark-gold: rgb(210, 161, 87);
     --nude-gold: rgb(255, 204, 130);
     --nude-grey: rgb(172, 147, 129); 
     --pure-white: rgb(255, 255, 255);
@@ -283,7 +284,6 @@ nav {
 
 .section_pic-container {
     display: flex;
-    height: 300px;
     width: 300px;
 
     /* make width of img fit div container - need for Chrome */
@@ -344,36 +344,37 @@ nav {
     padding-right: 1rem;
     width: fit-content;
     border: 1px solid;
-    font-size: .8rem;
+    font-size: 1rem;
     border-radius: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transition-speed);
 }
 
-.btn-color-1, .btn-color-2 {
-    border-color: var(--nude-grey);
-}
-
 .btn-color-1 {
-    color: var(--background);
-    background-color: var(--light-pink);
+    color: var(--dark-grey);
+    background-color: var(--dark-gold);
+    border-color: var(--nude-gold);
 }
 
 .btn-color-1:hover {
-    color: var(--nude-gold);
-    background-color: var(--foreground);
+    color: var(--light-pink);
+    background-color: var(--charcoal-grey);
+    border-color: var(--burgundy-pink);
 }
 
 .btn-color-2 {
-    color: var(--light-pink);
+    color: var(--nude-gold);
     background-color: var(--dark-grey);
+    border-color: var(--nude-gold);
 }
 
 .btn-color-2:hover {
-    color: var(--nude-gold);
+    color: var(--burgundy-pink);
     background-color: var(--charcoal-grey);
+    border-color: var(--light-pink);
 }
+
 
 
 /* Social / Logo */
@@ -450,20 +451,9 @@ nav {
     width: 100%;
 }
 
-
 /* Read More btn */
-
 .read-more-btn {
     margin-top: 2rem;
-    color: var(--nude-gold);
-    border-color: var(--nude-grey);
-    background-color: var(--charcoal-grey);
-    text-decoration: none;
-}
-
-.read-more-btn:hover {
-    color: var(--dark-grey);
-    background-color: var(--light-pink);
 }
 
 
@@ -475,7 +465,6 @@ nav {
     align-items: center;
 }
 
-
 .read-more-intro {
     color: var(--burgundy-pink);
 }
@@ -484,29 +473,23 @@ nav {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     gap: 2rem;
 }
 
-.lets-connect-text {
+.lets-connect {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--nude-gold);
+    background-color: var(--charcoal-grey);
 }
 
-
+/* Read Less btn */
 .read-less-btn {
     margin-top: 3rem;
-    color: var(--nude-gold);
-    border-color: var(--nude-grey);
-    background-color: var(--charcoal-grey);
-    text-decoration: none;
+    transition: 3s ease-in-out;
 }
 
-.read-less-btn:hover {
-    color: var(--dark-grey);
-    background-color: var(--light-pink);
-}
 
 
 /* Skills */
