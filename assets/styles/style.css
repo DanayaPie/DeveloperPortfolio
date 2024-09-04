@@ -331,13 +331,6 @@ nav {
 
 /* Home Section Buttons */
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-}
-
 .btn {
     padding: 0.5rem;
     padding-left: 1rem;
@@ -351,6 +344,13 @@ nav {
     transition: var(--transition-speed);
 }
 
+.social-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
 .btn-color-1 {
     color: var(--dark-grey);
     background-color: var(--dark-gold);
@@ -358,8 +358,8 @@ nav {
 }
 
 .btn-color-1:hover {
-    color: var(--light-pink);
-    background-color: var(--charcoal-grey);
+    color: var(--charcoal-grey);
+    background-color: var(--light-pink);
     border-color: var(--burgundy-pink);
 }
 
@@ -452,7 +452,7 @@ nav {
 }
 
 /* Read More btn */
-.read-more-btn {
+.read-more-btn-container {
     margin-top: 2rem;
 }
 
@@ -477,17 +477,25 @@ nav {
     gap: 2rem;
 }
 
-.lets-connect {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--nude-gold);
-    background-color: var(--charcoal-grey);
+.enlarge-images:hover {
+    transition: all 500ms;
+    /* transition-delay: 0.5s; */
+    transform: translateY(0px) scale(1.1) translateZ(0px);
+}
+
+.enlarge-images:hover {
+    transition: all 500ms;
+    /* transition-delay: 0.5s; */
+    transform: translateY(0px) scale(1.1) translateZ(0px);
 }
 
 /* Read Less btn */
-.read-less-btn {
+.read-less-btn-container {
     margin-top: 3rem;
-    transition: 3s ease-in-out;
+}
+
+.read-less-btn {
+    transition: 50ms ease-in-out;
 }
 
 

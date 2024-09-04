@@ -63,7 +63,10 @@
       <!-- Home Section -->
       <section id="home" class="child-section">
         <div class="section_pic-container home_pic-container">
-          <img src="assets/images/home/pie-white-logo.png" alt="Pie Logo" />
+          <img
+            src="assets/images-files/home/pie-white-logo.png"
+            alt="Pie Logo"
+          />
         </div>
         <div class="home-container">
           <h1 class="section_title">Danaya Chusuwan</h1>
@@ -75,10 +78,10 @@
             tracking web app, to showcase my skills in full-stack development
             and automation testing.
           </p>
-          <div class="btn-container">
+          <div class="social-btn-container">
             <button
               class="btn btn-color-1"
-              onclick="window.open('assets/images/home/danaya-chusuwan_resume.pdf')"
+              onclick="window.open('assets/images-files/home/danaya-chusuwan_resume.pdf')"
             >
               Resume
             </button>
@@ -91,13 +94,13 @@
           </div>
           <div id="social-container">
             <img
-              src="./assets/images/logos/linkedin.png"
+              src="./assets/images-files/about/linkedin.png"
               alt="My LinkedIn"
               class="logo"
               onclick="window.open('https://www.linkedin.com/in/danayapie/', '_blank')"
             />
             <img
-              src="./assets/images/logos/github.png"
+              src="./assets/images-files/about/github.png"
               alt="My Github"
               class="logo"
               onclick="window.open('https://github.com/DanayaPie', '_blank')"
@@ -115,7 +118,7 @@
             <div class="about_pic-container">
               <div class="section_pic-container">
                 <img
-                  src="assets/images/about/headshots.png"
+                  src="assets/images-files/about/headshots.png"
                   alt="Profile Picture"
                   class="about-pic"
                 />
@@ -153,12 +156,14 @@
             </p>
           </div>
         </div>
-        <button
-          class="btn read-more-btn btn-color-2"
-          onclick="showReadMore(), location.href='./#read-more'"
-        >
-          Read More...
-        </button>
+        <div class="read-more-btn-container">
+          <button
+            class="btn read-more-btn btn-color-2"
+            onclick="showReadMore(), location.href='./#read-more'"
+          >
+            Read More...
+          </button>
+        </div>
       </section>
 
       <!-- Read More Section-->
@@ -200,26 +205,29 @@
           </p>
           <p class="section_text_p">
             <span class="highlight-text">When I’m not coding</span>, you will
-            find me reading, crocheting, gardening, or diving into video games
-            (I have never owned a console, so it is PC for me!). I also have a
-            <span class="highlight-text">cat named Ashe</span>, who is friendly,
-            vocal, and loves hiking.
+            find me reading &#x1F4D8;, gardening &#x1F331;, doing DIY projects
+            &#x1F6E0;, or playing video games &#x1F3AE;. I have never owned a
+            console, so it is PC for me! I also have a
+            <span class="highlight-text">cat named Ashe</span> &#x1F431;, who is
+            friendly, vocal, and loves hiking.
           </p>
           <h2 class="section_text_p">Look at my cat!</h2>
         </div>
         <div class="section_pic-container">
           <img
-            src="assets/images/about/ashe-01.png"
-            alt="More Pictures"
-            class="read-more-pics"
+            src="assets/images-files/about/ashe-01.png"
+            alt="Read More Pictures"
+            class="read-more-pics enlarge-images"
           />
         </div>
-        <button
-          class="btn read-less-btn btn-color-1"
-          onclick="hideReadMore(), location.href='./#about'"
-        >
-          Read Less...
-        </button>
+        <div class="read-less-btn-container">
+          <button
+            class="btn read-less-btn btn-color-1"
+            onclick="hideReadMore(), location.href='./#about'"
+          >
+            Read Less
+          </button>
+        </div>
       </section>
 
       <!-- Skills Section -->
