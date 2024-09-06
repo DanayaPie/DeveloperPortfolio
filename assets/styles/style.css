@@ -311,6 +311,7 @@ nav {
 .home-container {
     align-self: center;
     text-align: center;
+    align-items: center;
 }
 
 .section_title {
@@ -341,7 +342,7 @@ nav {
 }
 
 
-/* Home Section Buttons */
+/* Social Buttons */
 
 .btn {
     padding: 0.5rem;
@@ -388,21 +389,20 @@ nav {
 }
 
 
-
 /* Social / Logo */
-#social-container {
+.social-container {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    height: 2rem;
-    gap: 1rem;
+    /* align-content: center; */
+    /* align-self: center; */
+
+    gap: 2rem;
+    height: 3rem;
 }
 
-.logo {
-    height: 2rem;
+.social-logo {
     cursor: pointer;
 }
-
 
 
 /* ABOUT SECTION */
@@ -494,7 +494,6 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
     gap: 2rem;
     height: var(--three-hundred-px);
 }
@@ -507,6 +506,7 @@ nav {
 .enlarge-images:hover {
     transform: translateY(0px) scale(1.1) translateZ(0px);
 }
+
 
 /* Read Less btn */
 .read-less-btn-container {
