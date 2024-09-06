@@ -21,6 +21,8 @@
 
     .about_pic-container {
         align-self: center;
+        width: 100%;
+        max-width: 18.75rem;
     }
 
     .text-container-1 {
