@@ -405,6 +405,7 @@ nav {
 }
 
 
+
 /* ABOUT SECTION */
 
 #about {
@@ -471,6 +472,7 @@ nav {
 
 
 /* READ MORE SECTION*/
+
 #read-more {
     display: none;
     flex-direction: column;
@@ -514,12 +516,15 @@ nav {
 
 
 
-/* Skills */
+/* SKILLS SECTION */
 #skills {
     display: flex;
     flex-direction: column;
 
 }
+
+
+
 
 /* Projects */
 #projects {
