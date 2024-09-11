@@ -412,6 +412,10 @@ nav {
     flex-direction: column;
 }
 
+.about-intro-text {
+    margin-top: 1rem;
+}
+
 .about-container {
     margin-top: 2rem;
     display: flex;
@@ -447,7 +451,7 @@ nav {
     width: 60%;
 }
 
-.about-intro {
+.about-text-opening {
     color: var(--burgundy-pink);
     margin-bottom: 1rem;
 }
