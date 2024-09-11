@@ -125,18 +125,30 @@ function displaySkills(filterCategory = null) {
 
     skills.forEach(skill => {
         const img = new Image();
-        img.src = 'assets/images-files/skills/${skill.image}';
+        img.src = `assets/images-files/skills/${skill.image}`;
         img.alt = skill.name;
-        // img.classList.add('enlarge-image');
 
-        const skillCardDiv = document.createElement('div');
-        skillCardDiv.classList.add('image-card');
-        skillCardDiv.appendChild(img);
+
+        const imageCard = document.createElement('div');
+        imageCard.classList.add('image-card');
+        imageCard.appendChild(img);
+
+        const skillImgCont = document.createElement('div');
+        skillImgCont.classList.add('skill-img-container');
+        skillImgCont.appendChild(imageCard);
 
         const skillName = document.createElement('p');
         skillName.textContent = skill.name;
-        skillCardDiv.appendChild(skillName);
 
-        skillCont.appendChild(skillCardDiv);
+        const skillNameCont = document.createElement('div');
+        skillNameCont.classList.add('skill-name-container');
+        skillNameCont.appendChild(skillName);
+
+        const skillCard = document.createElement('div');
+        skillCard.classList.add('skill-card');
+        skillCard.appendChild(skillImgCont);
+        skillCard.appendChild(skillNameCont);
+
+        skillCont.appendChild(skillCard);
     });
 };

@@ -59,18 +59,21 @@ body::-webkit-scrollbar-thumb {
 h1 {
     font-size: 3rem;
     font-weight: 400;
-    color: var(--pure-white)
+    color: var(--pure-white);
+    cursor: default;
 }
 
 h2, h3, h4 {
     font-size: 2rem;
     font-weight: normal;
-    color: var(--burgundy-pink)
+    color: var(--burgundy-pink);
+    cursor: default;
 }
 
 p {
     font-size: 1rem;
     color: var(--ash-grey);
+    cursor: default;
 }
 
 /* images */
@@ -112,10 +115,6 @@ nav {
     padding: 1rem;
     color: var(--pure-white);
     font-size: 1.5rem;
-}
-
-.nav-title:hover {
-    cursor: default;
 }
 
 
@@ -520,7 +519,102 @@ nav {
 #skills {
     display: flex;
     flex-direction: column;
+}
 
+.filter-skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    list-style: none;
+}
+
+.filter-skills h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.75rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-skills li {
+    max-width: 10rem;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.filter-skills a {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ash-grey);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.filter-skills a:hover {
+    color: var(--light-pink);
+}
+
+.filter-skill a.active {
+    color: var(--nude-gold);
+}
+
+
+.skill-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 90%;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: var(--charcoal-grey);
+    border-color: var(--charcoal-grey);
+    border-style: solid;
+    border-width: 0.10rem;
+    border-radius: 0.75rem;
+    transition: var(--transition-speed);
+    transform: none;
+}
+
+.skill-card:hover {
+    transform: translateY(0px) scale(1.1) translateZ(0px);
+    border-color: var(--light-pink);
+}
+
+.skill-img-container {
+    margin-top: auto;
+    max-width: 4rem;
+    max-height: 3rem;
+}
+
+.skill-name-container {
+    margin-top: auto;
+}
+
+.skill-name-container p {
+    margin-top: 0.5rem;
+    color: var(--pure-white);
+    font-weight: 600;
 }
 
 
@@ -530,7 +624,6 @@ nav {
 #projects {
     display: flex;
     flex-direction: column;
-
 }
 
 /* Journey */
