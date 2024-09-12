@@ -16,14 +16,13 @@ function toggleHamburgerMenu() {
 };
 
 
-
 // EVENT LISTENER
 document.addEventListener("DOMContentLoaded", function () {
 
     handleScrollNavigation(); // Initialized scroll navigation
     displaySkills(); // Display all skills by default
+    applySkillFilters(); // Display skill by categories and mark category as active
 });
-
 
 
 // SCROLL NAVIGATION
@@ -57,9 +56,7 @@ function handleScrollNavigation() {
 };
 
 
-
 // SHOW / HIDE READ MORE SECTION
-
 function showReadMore() {
     document.querySelector('#read-more').style.display = 'flex';
     document.querySelector('.read-more-btn').style.display = 'none';
@@ -72,9 +69,7 @@ function hideReadMore() {
 };
 
 
-
 // SKILLS SECTION
-
 function getSkills() {
     return [
         // Languages
@@ -116,18 +111,22 @@ function getSkills() {
     ]
 };
 
-
-function displaySkills(filterCategory = null) {
+function displaySkills(filter = 'All') {
     let skills = getSkills();
 
     const skillCont = document.getElementsByClassName('skill-container')[0];
     skillCont.innerHTML = ''; // clear current content
 
-    skills.forEach(skill => {
+    // Filter skills based on category
+    let filteredSkills = skills.filter(skill =>
+        filter === 'All' || skill.categories.includes(filter)
+    );
+
+    // Display filtered skills
+    filteredSkills.forEach(skill => {
         const img = new Image();
         img.src = `assets/images-files/skills/${skill.image}`;
         img.alt = skill.name;
-
 
         const imageCard = document.createElement('div');
         imageCard.classList.add('image-card');
@@ -151,4 +150,41 @@ function displaySkills(filterCategory = null) {
 
         skillCont.appendChild(skillCard);
     });
+};
+
+function applySkillFilters() {
+    const filterMappings = {
+        'filter-all': 'All',
+        'filter-languages': 'Languages',
+        'filter-web': 'Web Development',
+        'filter-db': 'Databases',
+        'filter-fra-lib': 'Frameworks and Libraries',
+        'filter-test': 'Testing and Automation',
+        'filter-dev': 'DevOps',
+        'filter-tools': 'Tools',
+    };
+
+    Object.keys(filterMappings).forEach(filterId => {
+        const filterElement = document.getElementById(filterId);
+        if (filterElement) {
+            filterElement.addEventListener('click', function () {
+                // Retrieves category name associated with filterId then update the displayed skills
+                displaySkills(filterMappings[filterId]);
+                setActiveFilter(filterId);
+            });
+        }
+    });
+};
+
+function setActiveFilter(filterId) {
+
+    const allFilterLinks = document.querySelectorAll('.filter-options a');
+    allFilterLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    const activeLink = document.getElementById(filterId);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    };
 };

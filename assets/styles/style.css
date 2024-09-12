@@ -525,6 +525,7 @@ nav {
     flex-direction: column;
 }
 
+/* filter skills */
 .filter-skills {
     display: flex;
     flex-direction: row;
@@ -549,13 +550,13 @@ nav {
     flex-wrap: wrap;
 }
 
-.filter-skills li {
+.filter-options li {
     max-width: 10rem;
     padding: 0.5rem;
     justify-content: center;
 }
 
-.filter-skills a {
+.filter-options a {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -566,15 +567,15 @@ nav {
     cursor: pointer;
 }
 
-.filter-skills a:hover {
+.filter-options a:hover {
     color: var(--light-pink);
 }
 
-.filter-skill a.active {
+.filter-options a.active {
     color: var(--nude-gold);
 }
 
-
+/* skills card */
 .skill-container {
     display: flex;
     flex-direction: row;
