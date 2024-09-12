@@ -436,7 +436,7 @@ nav {
 .about_pic-container {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 30%;
     align-items: center;
     justify-content: center;
 }
