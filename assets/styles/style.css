@@ -394,14 +394,11 @@ nav {
 .social-container {
     display: flex;
     flex-direction: row;
-    /* align-content: center; */
-    /* align-self: center; */
-
     gap: 2rem;
     height: 3rem;
 }
 
-.social-logo {
+.btn-logo {
     cursor: pointer;
 }
 
@@ -500,7 +497,6 @@ nav {
     transform: translateY(0px) scale(1.1) translateZ(0px);
 }
 
-
 /* Read Less btn */
 .read-less-btn-container {
     margin-top: 3rem;
@@ -509,6 +505,7 @@ nav {
 
 
 /* SKILLS SECTION */
+
 #skills {
     display: flex;
     flex-direction: column;
@@ -626,12 +623,23 @@ nav {
 
 
 
+/* PROJECTS SECTION */
 
-/* Projects */
 #projects {
     display: flex;
     flex-direction: column;
 }
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-container h2 {
+    text-align: left;
+}
+
 
 /* Journey */
 #journey {
