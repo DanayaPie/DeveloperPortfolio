@@ -115,41 +115,50 @@ function displaySkills(filter = 'All') {
     let skills = getSkills();
 
     const skillCont = document.getElementsByClassName('skill-container')[0];
-    skillCont.innerHTML = ''; // clear current content
+    skillCont.classList.add('hide-skillCont');
 
-    // Filter skills based on category
-    let filteredSkills = skills.filter(skill =>
-        filter === 'All' || skill.categories.includes(filter)
-    );
+    // wait for transition to finish before update skillCont
+    setTimeout(() => {
+        skillCont.innerHTML = ''; // clear current content
 
-    // Display filtered skills
-    filteredSkills.forEach(skill => {
-        const img = new Image();
-        img.src = `assets/images-files/skills/${skill.image}`;
-        img.alt = skill.name;
+        // Filter skills based on category
+        let filteredSkills = skills.filter(skill =>
+            filter === 'All' || skill.categories.includes(filter)
+        );
 
-        const imageCard = document.createElement('div');
-        imageCard.classList.add('image-card');
-        imageCard.appendChild(img);
+        // Display filtered skills
+        filteredSkills.forEach(skill => {
+            const img = new Image();
+            img.src = `assets/images-files/skills/${skill.image}`;
+            img.alt = skill.name;
 
-        const skillImgCont = document.createElement('div');
-        skillImgCont.classList.add('skill-img-container');
-        skillImgCont.appendChild(imageCard);
+            const imageCard = document.createElement('div');
+            imageCard.classList.add('image-card');
+            imageCard.appendChild(img);
 
-        const skillName = document.createElement('p');
-        skillName.textContent = skill.name;
+            const skillImgCont = document.createElement('div');
+            skillImgCont.classList.add('skill-img-container');
+            skillImgCont.appendChild(imageCard);
 
-        const skillNameCont = document.createElement('div');
-        skillNameCont.classList.add('skill-name-container');
-        skillNameCont.appendChild(skillName);
+            const skillName = document.createElement('p');
+            skillName.textContent = skill.name;
 
-        const skillCard = document.createElement('div');
-        skillCard.classList.add('skill-card');
-        skillCard.appendChild(skillImgCont);
-        skillCard.appendChild(skillNameCont);
+            const skillNameCont = document.createElement('div');
+            skillNameCont.classList.add('skill-name-container');
+            skillNameCont.appendChild(skillName);
 
-        skillCont.appendChild(skillCard);
-    });
+            const skillCard = document.createElement('div');
+            skillCard.classList.add('skill-card');
+            skillCard.appendChild(skillImgCont);
+            skillCard.appendChild(skillNameCont);
+
+            skillCont.appendChild(skillCard);
+        });
+
+        skillCont.classList.remove('hide-skillCont');
+
+    }, 300); // 300ms transition ease in-out
+
 };
 
 function applySkillFilters() {

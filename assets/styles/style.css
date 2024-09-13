@@ -269,9 +269,10 @@ nav {
     padding-top: calc(75px + 3rem);
     padding-bottom: 3rem;
     height: fit-content;
-    min-height: fit-content;
+    min-height: 100vh;
     max-width: 50vw;
     align-items: center;
+    transition: var(--transition-speed);
 }
 
 .child-section::after {
@@ -281,6 +282,7 @@ nav {
     height: 2px;
     width: 50%;
     background: linear-gradient(to right, var(--dark-grey), var(--nude-grey), var(--dark-grey));
+    transition: var(--transition-speed);
 }
 
 
@@ -443,7 +445,6 @@ nav {
 
 .about-pic {
     border-radius: 2rem;
-
 }
 
 .text-container-1 {
@@ -580,10 +581,20 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     width: 90%;
-    justify-content: center;
     margin-top: 2rem;
+
+    /* start with visible */
+    opacity: 1; 
+
+    /* apply transition to opacity */
+    transition: opacity 0.5s ease; 
+}
+
+.skill-container.hide-skillCont {
+    opacity: 0;
 }
 
 .skill-card {
@@ -597,8 +608,9 @@ nav {
     border-style: solid;
     border-width: 0.10rem;
     border-radius: 0.75rem;
-    transition: var(--transition-speed);
+    height: 7.4rem;
     transform: none;
+    transition: var(--transition-speed);
 }
 
 .skill-card:hover {
