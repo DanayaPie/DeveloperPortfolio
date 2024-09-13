@@ -317,7 +317,7 @@ nav {
 
 .section_title {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .section_title::after {
@@ -337,7 +337,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-.home_text_p {
+.section_text_p {
     margin-bottom: 2rem;
     text-align: left;
 }
@@ -414,12 +414,11 @@ nav {
     flex-direction: column;
 }
 
-.about-intro-text {
+.section_intro-text {
     margin-top: 1rem;
 }
 
 .about-container {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -452,11 +451,6 @@ nav {
     width: 60%;
 }
 
-.about-text-opening {
-    color: var(--burgundy-pink);
-    margin-bottom: 1rem;
-}
-
 .highlight-text {
     font-size: 1.25rem;
     font-weight: 400;
@@ -483,16 +477,10 @@ nav {
     align-items: center;
 }
 
-.read-more-intro {
-    color: var(--burgundy-pink);
-}
-
 .read-more-detail {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
     margin-bottom: 2rem;
-    gap: 2rem;
 }
 
 .read-more-image-container {
@@ -532,13 +520,13 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
     width: 100%;
     list-style: none;
 }
 
-.filter-skills h4 {
-    font-size: 1.25rem;
+.filter-skills h2 {
+    margin-right: 0.5rem;
+    font-size: 1.50rem;
     font-weight: 500;
     padding: 0.75rem;
 }

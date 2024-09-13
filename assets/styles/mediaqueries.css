@@ -17,6 +17,7 @@
 
     .about-detail-1 {
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     .about_pic-container {
