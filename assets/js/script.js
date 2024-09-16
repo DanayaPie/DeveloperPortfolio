@@ -129,7 +129,7 @@ function displaySkills(filter = 'All') {
         // Display filtered skills
         filteredSkills.forEach(skill => {
             const img = new Image();
-            img.src = `assets/images-files/skills/${skill.image}`;
+            img.src = `assets/images-files/tech-stacks/${skill.image}`;
             img.alt = skill.name;
 
             const imageCard = document.createElement('div');
