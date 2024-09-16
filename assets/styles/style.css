@@ -679,6 +679,17 @@ nav {
     height: 2rem;
 }
 
+
+/* code-tech-container */
+.code-tech-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
 /* source code */
 
 .source-code-btn {
@@ -688,10 +699,50 @@ nav {
     gap: 1rem;
 }
 
-
 .btn-logo {
     height: 2rem;
 }
+
+/* tech container */
+
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: auto;
+    height: fit-content;
+    width: fit-content;
+    gap: 1rem;
+}
+
+
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    /* background-color: var(--dark-grey);
+    border-color: var(--nude-gold);
+    border-style: solid;
+    border-width: 0.10rem;
+    border-radius: 0.75rem; */
+}
+
+.tech-img-container {
+    width: 3rem;
+    max-height: 3rem;
+    margin-top: auto;
+}
+
+.tech-name-container {
+    margin-top: auto;
+}
+
+
 
 
 
