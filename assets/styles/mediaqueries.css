@@ -8,11 +8,15 @@
     }
 
     .parent-section {
-        margin: 0 10rem;
+        margin: 0 20vw;
     }
 
     .child-section {
-        max-width: 80vw;
+        max-width: 90vw;
+    }
+
+    .child-section::after {
+        width: 100%;
     }
 
     .about-detail-1 {
@@ -22,8 +26,8 @@
 
     .about_pic-container {
         align-self: center;
-        width: 100%;
-        max-width: 18.75rem;
+        width: 70%;
+        max-width: 18rem;
     }
 
     .text-container-1 {
