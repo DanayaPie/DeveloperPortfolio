@@ -80,6 +80,7 @@ p {
 img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 
@@ -501,12 +502,12 @@ nav {
     border-radius: 0.5rem;
 }
 
-.enlarge-images {
+.enlarge-image {
     transition: var(--transition-speed);
     transform: none;
 }
 
-.enlarge-images:hover {
+.enlarge-image:hover {
     transform: translateY(0px) scale(1.1) translateZ(0px);
 }
 
@@ -704,6 +705,7 @@ nav {
 .contributor-contact-container {
     display: flex;
     height: 2rem;
+    cursor: pointer;
 }
 
 
@@ -728,7 +730,9 @@ nav {
 }
 
 .btn-logo {
+    display: flex;
     height: 2rem;
+    max-width: 2rem;
 }
 
 /* project tech container */
