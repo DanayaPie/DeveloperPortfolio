@@ -301,15 +301,6 @@ nav {
     margin-bottom: 3rem;
 }
 
-.image-card {
-    height: 100%;
-    width: 100%;
-}
-
-.image-card img {
-    object-fit: contain;
-}
-
 .home-container {
     align-self: center;
     text-align: center;
