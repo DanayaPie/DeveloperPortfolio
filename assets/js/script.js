@@ -133,13 +133,9 @@ function displaySkills(filter = 'All') {
             img.src = `assets/images-files/tech-stacks/${skill.image}`;
             img.alt = skill.name;
 
-            const imageCard = document.createElement('div');
-            imageCard.classList.add('image-card');
-            imageCard.appendChild(img);
-
             const skillImgCont = document.createElement('div');
             skillImgCont.classList.add('skill-img-container');
-            skillImgCont.appendChild(imageCard);
+            skillImgCont.appendChild(img);
 
             const skillName = document.createElement('p');
             skillName.textContent = skill.name;
