@@ -365,6 +365,10 @@ nav {
     gap: 1rem;
 }
 
+.social-btn {
+    width: 8rem;
+}
+
 .btn-color-1 {
     color: var(--dark-grey);
     background-color: var(--dark-gold);
@@ -391,14 +395,18 @@ nav {
 
 
 /* Social / Logo */
-.social-container {
+.social-site-container {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+    height: 2.5rem;
+    width: 10rem;
     gap: 2rem;
-    height: 3rem;
 }
 
-.btn-logo {
+.social-logo {
+    display: flex;
+    height: 2.5rem;
     cursor: pointer;
 }
 
@@ -461,6 +469,7 @@ nav {
 /* Read More btn */
 .read-more-btn-container {
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -485,6 +494,7 @@ nav {
     align-items: center;
     gap: 2rem;
     height: var(--three-hundred-px);
+    margin-bottom: 4rem;
 }
 
 .read-more-pic {
@@ -502,7 +512,7 @@ nav {
 
 /* Read Less btn */
 .read-less-btn-container {
-    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -578,6 +588,7 @@ nav {
     gap: 1.5rem;
     width: 90%;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     /* start with visible */
     opacity: 1; 

@@ -59,13 +59,14 @@ function handleScrollNavigation() {
 // SHOW / HIDE READ MORE SECTION
 function showReadMore() {
     document.querySelector('#read-more').style.display = 'flex';
-    document.querySelector('.read-more-btn').style.display = 'none';
+    readMoreBtnCont = document.querySelector('.read-more-btn-container');
+    readMoreBtnCont.style.display = 'none';
+    readMoreBtnCont.style.marginBottom = '0';
 };
 
 function hideReadMore() {
     document.querySelector('#read-more').style.display = 'none';
-    document.querySelector('.read-less-btn').style.display = 'flex';
-    document.querySelector('.read-more-btn').style.display = 'flex';
+    document.querySelector('.read-more-btn-container').style.display = 'flex';
 };
 
 
