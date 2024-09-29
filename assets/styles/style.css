@@ -665,7 +665,7 @@ nav {
     transition: var(--transition-speed);
 } */
 
-/* contributors */
+/* project contributors */
 
 .contributor-container {
     display: flex;
@@ -707,7 +707,7 @@ nav {
 }
 
 
-/* code-tech-container */
+/* project code-tech-container */
 .code-tech-container {
     display: flex;
     flex-direction: row;
@@ -718,7 +718,7 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* source code */
+/* project source code */
 
 .source-code-btn {
     display: flex;
@@ -731,7 +731,7 @@ nav {
     height: 2rem;
 }
 
-/* tech container */
+/* project tech container */
 
 .tech-container {
     display: flex;
@@ -765,7 +765,24 @@ nav {
     margin-top: auto;
 }
 
+/* project img container */
 
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    /* height: 30rem; */
+    margin-bottom: 2rem;
+}
+
+.gallery-container {
+    display: flex;
+    height: 30rem;
+}
+
+.gallery-img {
+    display: flex;
+    height: 30rem;
+}
 
 
 
