@@ -7,6 +7,7 @@
     /* color */
     --dark-grey: rgb(28, 27, 27);
     --charcoal-grey: rgb(43, 43, 44);
+    --light-grey: rgb(153, 153, 156);
     --ash-grey: rgb(213, 206, 207);
     --burgundy-red: rgb(160, 30, 39);
     --burgundy-pink: rgb(193, 86, 102);
@@ -642,19 +643,26 @@ nav {
 .project-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: var(--charcoal-grey);
+    border-radius: 0.5rem;
+    /* border: 2px solid var(--light-grey); */
 }
 
-/* .project-container::after {
+.project-container::after {
     position: relative;
     content: "";
     align-self: center;
-    height: 2px;
     width: 20%;
-    background: linear-gradient(to bottom, var(--dark-grey), var(--nude-grey), var(--dark-grey));
-    background-size: 15px 10px; 
-    background-position: left, center, right;
-    transition: var(--transition-speed);
+    bottom: -2rem;
+    height: 1px;
+    width: 50%;
+    background: linear-gradient(to right, var(--dark-grey), var(--light-grey), var(--dark-grey));
+}
+
+/* .project-container:last-child::after { 
+    content: none;
 } */
 
 /* project contributors */
@@ -760,23 +768,53 @@ nav {
     margin-top: auto;
 }
 
-/* project img container */
+/* project carousel container */
 
-.project-gallery {
+.carousel-container {
     display: flex;
+    align-content: center;
     justify-content: center;
-    /* height: 30rem; */
+    height: 18rem;
     margin-bottom: 2rem;
 }
 
-.gallery-container {
+.project-carousel {
     display: flex;
-    height: 30rem;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
 }
 
-.gallery-img {
+.carousel-card {
     display: flex;
-    height: 30rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 18rem;
+    z-index: 0;
+}
+
+.carousel-card {
+    border-radius: 0.5rem;
+}
+
+.carousel-card:hover {
+    box-shadow: 0 0 0.5rem var(--light-pink);
+    z-index: 1;
+}
+
+.carousel-img img {
+    height: 18rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-description {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    left: 65%;
+    text-shadow: 0 0.2rem 0.3rem var(--light-grey);
 }
 
 
