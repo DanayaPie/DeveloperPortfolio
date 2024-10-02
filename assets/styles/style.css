@@ -774,7 +774,7 @@ nav {
     display: flex;
     align-content: center;
     justify-content: center;
-    height: 18rem;
+    /* height: 18rem; */
     margin-bottom: 2rem;
 }
 
@@ -791,11 +791,9 @@ nav {
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 18rem;
+    height: auto;
+    width: auto;
     z-index: 0;
-}
-
-.carousel-card {
     border-radius: 0.5rem;
 }
 
@@ -804,8 +802,11 @@ nav {
     z-index: 1;
 }
 
-.carousel-img img {
+.carousel-img {
     height: 18rem;
+}
+
+.carousel-img img {
     border-radius: 0.5rem;
 }
 
@@ -813,7 +814,6 @@ nav {
     display: flex;
     position: absolute;
     bottom: 5%;
-    left: 65%;
     text-shadow: 0 0.2rem 0.3rem var(--light-grey);
 }
 

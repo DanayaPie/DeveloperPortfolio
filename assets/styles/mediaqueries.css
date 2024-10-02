@@ -33,4 +33,12 @@
     .text-container-1 {
         width: 100%;
     }
+
+    .project-carousel {
+        flex-direction: column;
+    }
+
+    .carousel-img {
+        max-height: 15rem;
+    }
 }
