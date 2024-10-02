@@ -518,6 +518,24 @@ nav {
 }
 
 /* filter skills */
+
+.filter-skills-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.filter-skills-container::after {
+    position: relative;
+    content: "";
+    align-self: center;
+    width: 40%;
+    bottom: -2rem;
+    height: 1px;
+    background: linear-gradient(to right, var(--dark-grey), var(--light-grey), var(--dark-grey));
+}
+
+
 .filter-skills {
     display: flex;
     flex-direction: row;
@@ -647,23 +665,17 @@ nav {
     margin-bottom: 2rem;
     background: var(--charcoal-grey);
     border-radius: 0.5rem;
-    /* border: 2px solid var(--light-grey); */
 }
 
 .project-container::after {
     position: relative;
     content: "";
     align-self: center;
-    width: 20%;
     bottom: -2rem;
     height: 1px;
-    width: 50%;
+    width: 40%;
     background: linear-gradient(to right, var(--dark-grey), var(--light-grey), var(--dark-grey));
 }
-
-/* .project-container:last-child::after { 
-    content: none;
-} */
 
 /* project contributors */
 
@@ -774,7 +786,6 @@ nav {
     display: flex;
     align-content: center;
     justify-content: center;
-    /* height: 18rem; */
     margin-bottom: 2rem;
 }
 
@@ -791,8 +802,6 @@ nav {
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: auto;
-    width: auto;
     z-index: 0;
     border-radius: 0.5rem;
 }
