@@ -310,7 +310,7 @@ nav {
 }
 
 .section_title {
-    position: relative;
+    text-align: center;
     margin-bottom: 4rem;
 }
 
@@ -328,6 +328,7 @@ nav {
 }
 
 .section_title-2 {
+    text-align: center;
     margin-bottom: 1rem;
 }
 
