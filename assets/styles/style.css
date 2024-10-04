@@ -837,6 +837,39 @@ nav {
 
 }
 
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--charcoal-grey);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.event-title {
+    font-size: 1.5rem;
+}
+
+.event-info {
+    font-weight: 500;
+    color: var(--light-grey);
+}
+
+.event-card p {
+    margin-bottom: 1rem;
+}
+
+.section_text_list {
+    font-size: 1rem;
+    color: var(--ash-grey);
+    list-style-position: inside;
+    cursor: default;
+    margin-bottom: 1rem;
+}
+
+.event-date {
+    color: var(--light-pink);
+}
 
 
 
