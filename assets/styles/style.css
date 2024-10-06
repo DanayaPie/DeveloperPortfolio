@@ -864,7 +864,7 @@ nav {
     height: 100%;
     top: 0;
     left: 50%;
-    margin-left: 0.15rem;
+    margin-left: -0.15rem;
     background: var(--light-grey);
     z-index: -1;
 }
@@ -903,12 +903,12 @@ nav {
     left: 50%;
 
     .event-icon {
-        left: -1rem;
+        left: -1.3rem;
     }
 
     .event-arrow {
         border-right: 1rem solid var(--light-grey);
-        left: 2.5rem;
+        left: 2rem;
     }
 }
 
@@ -920,12 +920,12 @@ nav {
     left: 0;
 
     .event-icon {
-        right: -1.5rem;
+        right: -1.3rem;
     }
 
     .event-arrow {
-        border-left: 1rem var(--light-grey);
-        right: 2.5rem;
+        border-left: 1rem solid var(--light-grey);
+        right: 2rem;
     }
 }
 

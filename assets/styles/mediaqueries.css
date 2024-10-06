@@ -111,14 +111,11 @@
         }
     
         .event-arrow {
+            border-left: 0;
             border-right: 1rem solid var(--light-grey);
             left: 2rem;
             right: 100%;
         }
-    }
-
-    .event-card {
-        /* margin-left: 0.5rem; */
     }
     
 }
