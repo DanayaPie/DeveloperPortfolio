@@ -263,7 +263,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20rem;
+    align-content: center;
+    justify-content: center;
 }
 
 .child-section {
@@ -273,7 +274,7 @@ nav {
     padding-bottom: 3rem;
     height: fit-content;
     min-height: 100vh;
-    max-width: 65vw;
+    max-width: 50vw;
     align-content: center;
     align-items: center;
     transition: var(--transition-speed);
@@ -297,7 +298,6 @@ nav {
 #home {
     display: flex;
     flex-direction: column;
-    max-width: 50vw;
 }
 
 .home_pic-container {
@@ -416,7 +416,6 @@ nav {
 #about {
     display: flex;
     flex-direction: column;
-    max-width: 50vw;
 }
 
 .section_intro-text {
@@ -435,7 +434,6 @@ nav {
     align-content: center;
     justify-content: center;
     height: fit-content;
-    /* width: 100%; */
     gap: 2rem;
 }
 
@@ -849,40 +847,105 @@ nav {
 #journey {
     display: flex;
     flex-direction: column;
-
+    min-width: 70vw;
 }
 
 .timeline-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    gap: 2rem;
 }
 
-.vertical-timeline-event {
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 0.3rem;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: 0.15rem;
+    background: var(--light-grey);
+    z-index: -1;
+}
+
+.card-container {
     display: flex;
     position: relative;
-    width: 100%;
+    width: 50%;
+    /* background-color: aliceblue; */
 }
 
-/* Odd event-card (left) */
-.vertical-timeline-element:nth-child(2n-1) {
+.event-icon {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--pure-white);
+    z-index: 10;
 }
 
-/* Even event-card (right) */
-.vertical-timeline-element:nth-child(2n-2) .event-card {
+.event-arrow {
+    position: absolute;
+    top: 1.3rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+}
+
+/* Odd event-card to the right */
+.card-container:nth-child(2n-1) {
     display: flex;
-    justify-content: flex-start;
+    justify-content: left;
+    padding-left: 3rem;
+    left: 50%;
+
+    .event-icon {
+        left: -1rem;
+    }
+
+    .event-arrow {
+        border-right: 1rem solid var(--light-grey);
+        left: 2.5rem;
+    }
+}
+
+/* Even event-card to the left */
+.card-container:nth-child(2n-2){
+    display: flex;
+    justify-content: right;
+    padding-right: 3rem;
+    left: 0;
+
+    .event-icon {
+        right: -1.5rem;
+    }
+
+    .event-arrow {
+        border-left: 1rem solid white;
+        right: 2.5rem;
+    }
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    color: rgb(37, 164, 99);
+    z-index: 10;
 }
 
 .event-card {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 45%;
+    width: fit-content;
+    /* max-width: 45%; */
     background: var(--charcoal-grey);
     border-radius: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    /* margin-bottom: 2rem; */
 }
 
 
