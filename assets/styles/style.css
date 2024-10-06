@@ -895,40 +895,6 @@ nav {
     border-bottom: 1rem solid transparent;
 }
 
-/* Odd event-card to the right */
-.card-container:nth-child(2n-1) {
-    display: flex;
-    justify-content: left;
-    padding-left: 3rem;
-    left: 50%;
-
-    .event-icon {
-        left: -1.3rem;
-    }
-
-    .event-arrow {
-        border-right: 1rem solid var(--light-grey);
-        left: 2rem;
-    }
-}
-
-/* Even event-card to the left */
-.card-container:nth-child(2n-2){
-    display: flex;
-    justify-content: right;
-    padding-right: 3rem;
-    left: 0;
-
-    .event-icon {
-        right: -1.3rem;
-    }
-
-    .event-arrow {
-        border-left: 1rem solid var(--light-grey);
-        right: 2rem;
-    }
-}
-
 .material-symbols-outlined {
     position: absolute;
     color: rgb(37, 164, 99);
@@ -939,12 +905,10 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: fit-content;
     background: var(--charcoal-grey);
     border-radius: 1rem;
     padding: 1rem 1.5rem;
 }
-
 
 .event-title {
     text-align: left;
@@ -966,11 +930,61 @@ nav {
     color: var(--ash-grey);
     list-style-position: inside;
     cursor: default;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .event-date {
-    color: var(--light-grey);
+    position: absolute;
+    width: 100%;
+    top: 1.5rem;
+    font-weight: 500;
+    color: var(--ash-grey);
+}
+
+/* Odd event-card to the right */
+.card-container:nth-child(2n-1) {
+    display: flex;
+    justify-content: left;
+    padding-left: 3rem;
+    left: 50%;
+
+    .event-icon {
+        left: -1.3rem;
+    }
+
+    .event-arrow {
+        border-right: 1rem solid var(--light-grey);
+        left: 2rem;
+    }
+
+    .event-date {
+        text-align: right;
+        right: 100%;
+        margin-right: 8rem;
+    }
+}
+
+/* Even event-card to the left */
+.card-container:nth-child(2n-2){
+    display: flex;
+    justify-content: right;
+    padding-right: 3rem;
+    left: 0;
+
+    .event-icon {
+        right: -1.3rem;
+    }
+
+    .event-arrow {
+        border-left: 1rem solid var(--light-grey);
+        right: 2rem;
+    }
+
+    .event-date {
+        text-align: left;
+        left: 100%;
+        margin-left: 8rem;
+    }
 }
 
 

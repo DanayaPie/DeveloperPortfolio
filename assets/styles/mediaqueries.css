@@ -69,14 +69,11 @@
         max-height: 15rem;
     }
 
-
-
-    /* JOURNEY SECTION */
-
-    #journey {
-
+    .event-date {
+        position: static;
     }
-    
+
+    /* JOURNEY SECTION */    
     .timeline-container::after {
         left: 0;
         margin-left: 2rem;
@@ -84,7 +81,7 @@
 
     .card-container {
         width: 90%;
-    }
+    } 
 
     .card-container:nth-child(2n-1) {
         left: 2rem;
@@ -97,6 +94,12 @@
         .event-arrow {
             border-right: 1rem solid var(--light-grey);
             left: 2rem;
+        }
+
+        .event-date {
+            text-align: right;
+            margin-right: 0;
+            margin-left: 0;
         }
     }
 
@@ -115,6 +118,12 @@
             border-right: 1rem solid var(--light-grey);
             left: 2rem;
             right: 100%;
+        }
+
+        .event-date {
+            text-align: right;
+            margin-right: 0;
+            margin-left: 0;
         }
     }
     
