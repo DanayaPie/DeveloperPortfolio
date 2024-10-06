@@ -72,48 +72,58 @@ function hideReadMore() {
 
 // SKILLS SECTION
 function getSkills() {
-    return [
-        // Languages
-        { name: 'Java', image: 'java.png', categories: ['Languages'], ranking: 1 },
-        { name: 'Python', image: 'python.png', categories: ['Languages'], ranking: 2 },
-        { name: 'JavaScript', image: 'javascript.png', categories: ['Languages', 'Web Development'], ranking: 3 },
-        { name: 'SQL', image: 'sql.png', categories: ['Languages', 'Databases'], ranking: 4 },
+    return {
+        Languages: [
+            { name: 'Java', image: 'java.png' },
+            { name: 'Python', image: 'python.png' },
+            { name: 'JavaScript', image: 'javascript.png' },
+            { name: 'SQL', image: 'sql.png' }
+        ],
 
-        // Web Development
-        { name: 'HTML', image: 'html.png', categories: ['Web Development'], ranking: 1 },
-        { name: 'CSS', image: 'css.png', categories: ['Web Development'], ranking: 2 },
+        WebDevelopment: [
+            { name: 'JavaScript', image: 'javascript.png' },
+            { name: 'HTML', image: 'html.png' },
+            { name: 'CSS', image: 'css.png' }
+        ],
 
-        // Databases
-        { name: 'PostgreSQL', image: 'postgresql.png', categories: ['Databases'], ranking: 1 },
-        { name: 'MongoDB', image: 'mongodb.png', categories: ['Databases'], ranking: 2 },
-        { name: 'H2', image: 'h2.png', categories: ['Databases'], ranking: 3 },
+        Databases: [
+            { name: 'SQL', image: 'sql.png' },
+            { name: 'PostgreSQL', image: 'postgresql.png' },
+            { name: 'MongoDB', image: 'mongodb.png' },
+            { name: 'H2', image: 'h2.png' }
+        ],
 
-        // Frameworks and Libraries
-        { name: 'Spring', image: 'spring.png', categories: ['Frameworks and Libraries'], ranking: 1 },
-        { name: 'Hibernate', image: 'hibernate.png', categories: ['Frameworks and Libraries'], ranking: 2 },
+        FrameworksAndLibraries: [
+            { name: 'Spring', image: 'spring.png' },
+            { name: 'Hibernate', image: 'hibernate.png' }
+        ],
 
-        // Test and Automation
-        { name: 'Selenium', image: 'selenium.png', categories: ['Testing and Automation'], ranking: 1 },
-        { name: 'JUnit 5', image: 'junit5.png', categories: ['Testing and Automation'], ranking: 2 },
-        { name: 'Mockito', image: 'mockito.png', categories: ['Testing and Automation'], ranking: 3 },
-        { name: 'Cucumber', image: 'cucumber.png', categories: ['Testing and Automation'], ranking: 4 },
-        { name: 'Postman', image: 'postman.png', categories: ['Testing and Automation', 'DevOps'], ranking: 5 },
+        TestingAndAutomation: [
+            { name: 'Selenium', image: 'selenium.png' },
+            { name: 'JUnit 5', image: 'junit5.png' },
+            { name: 'Mockito', image: 'mockito.png' },
+            { name: 'Cucumber', image: 'cucumber.png' },
+            { name: 'Postman', image: 'postman.png' }
+        ],
 
-        // DevOps
-        { name: 'Git', image: 'git.png', categories: ['DevOps'], ranking: 1 },
-        { name: 'Jenkins', image: 'jenkins.png', categories: ['DevOps'], ranking: 2 },
-        { name: 'Maven', image: 'maven.png', categories: ['DevOps'], ranking: 3 },
-        { name: 'Jira', image: 'jira.png', categories: ['DevOps'], ranking: 4 },
+        DevOps: [
+            { name: 'Git', image: 'git.png' },
+            { name: 'Jenkins', image: 'jenkins.png' },
+            { name: 'Maven', image: 'maven.png' },
+            { name: 'Jira', image: 'jira.png' },
+            { name: 'Postman', image: 'postman.png' }
+        ],
 
-        // Tools
-        { name: 'DBeaver', image: 'dbeaver.png', categories: ['Tools'], ranking: 1 },
-        { name: 'Lucidchart', image: 'lucidchart.png', categories: ['Tools'], ranking: 2 },
-        { name: 'Draw.io', image: 'drawio.png', categories: ['Tools'], ranking: 3 }
-    ]
+        Tools: [
+            { name: 'DBeaver', image: 'dbeaver.png' },
+            { name: 'Lucidchart', image: 'lucidchart.png' },
+            { name: 'Draw.io', image: 'drawio.png' }
+        ]
+    };
 };
 
 function displaySkills(filter = 'All') {
-    let skills = getSkills();
+    const skills = getSkills();
 
     const skillCont = document.getElementsByClassName('skill-container')[0];
     skillCont.classList.add('hide-skillCont');
@@ -122,10 +132,16 @@ function displaySkills(filter = 'All') {
     setTimeout(() => {
         skillCont.innerHTML = ''; // clear current content
 
-        // Filter skills based on category
-        let filteredSkills = skills.filter(skill =>
-            filter === 'All' || skill.categories.includes(filter)
-        );
+        let filteredSkills = [];
+        if (filter === 'All') {
+            // Gather all skills from each category
+            Object.keys(skills).forEach(category => {
+                filteredSkills = filteredSkills.concat(skills[category]);
+            });
+        } else if (skills[filter]) {
+            // Get skills from the specific category
+            filteredSkills = skills[filter];
+        }
 
         // Display filtered skills
         filteredSkills.forEach(skill => {
@@ -155,17 +171,16 @@ function displaySkills(filter = 'All') {
         skillCont.classList.remove('hide-skillCont');
 
     }, 300); // 300ms transition ease in-out
-
 };
 
 function applySkillFilters() {
     const filterMappings = {
         'filter-all': 'All',
         'filter-languages': 'Languages',
-        'filter-web': 'Web Development',
+        'filter-web': 'WebDevelopment',
         'filter-db': 'Databases',
-        'filter-fra-lib': 'Frameworks and Libraries',
-        'filter-test': 'Testing and Automation',
+        'filter-fra-lib': 'FrameworksAndLibraries',
+        'filter-test': 'TestingAndAutomation',
         'filter-dev': 'DevOps',
         'filter-tools': 'Tools',
     };
@@ -174,7 +189,7 @@ function applySkillFilters() {
         const filterElement = document.getElementById(filterId);
         if (filterElement) {
             filterElement.addEventListener('click', function () {
-                // Retrieves category name associated with filterId then update the displayed skills
+                // Retrieves category name associated with filterId then updates the displayed skills
                 displaySkills(filterMappings[filterId]);
                 setActiveFilter(filterId);
             });
