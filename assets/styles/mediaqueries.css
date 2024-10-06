@@ -1,4 +1,7 @@
 @media screen and (max-width: 950px){
+    
+    /* NAVIGATION BAR */
+    
     #full-nav {
         display: none;
     }
@@ -6,6 +9,10 @@
     #hamburger-nav {
         display: flex;
     }
+
+
+
+    /* PARENT, CHILD SECTIONS */
 
     .parent-section {
         margin: 0 20vw;
@@ -19,6 +26,10 @@
         width: 100%;
     }
 
+
+
+    /* ABOUT SECTION */
+
     .about-detail-1 {
         flex-direction: column;
         margin-bottom: 0;
@@ -30,13 +41,25 @@
         max-width: 18rem;
     }
 
+    .about-text-container {
+        width: 100%;
+    }
+
     .text-container-1 {
         width: 100%;
     }
 
+
+
+    /* SKILLS SECTION */
+
     .code-tech-container {
         flex-direction: column;
     }
+
+
+
+    /* PROJECT SECTION */
 
     .project-carousel {
         flex-direction: column;
@@ -45,4 +68,57 @@
     .carousel-img {
         max-height: 15rem;
     }
+
+
+
+    /* JOURNEY SECTION */
+
+    #journey {
+
+    }
+    
+    .timeline-container::after {
+        left: 0;
+        margin-left: 2rem;
+    }
+
+    .card-container {
+        width: 90%;
+    }
+
+    .card-container:nth-child(2n-1) {
+        left: 2rem;
+        justify-content: left;
+    
+        .event-icon {
+            left: -1.15rem;
+        }
+    
+        .event-arrow {
+            border-right: 1rem solid var(--light-grey);
+            left: 2rem;
+        }
+    }
+
+    .card-container:nth-child(2n-2){
+        left: 2rem;
+        justify-content: left;
+        padding-right: 0;
+        padding-left: 3rem;
+
+        .event-icon {
+            left: -1.15rem;
+        }
+    
+        .event-arrow {
+            border-right: 1rem solid var(--light-grey);
+            left: 2rem;
+            right: 100%;
+        }
+    }
+
+    .event-card {
+        /* margin-left: 0.5rem; */
+    }
+    
 }

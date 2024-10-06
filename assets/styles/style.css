@@ -873,7 +873,6 @@ nav {
     display: flex;
     position: relative;
     width: 50%;
-    /* background-color: aliceblue; */
 }
 
 .event-icon {
@@ -925,7 +924,7 @@ nav {
     }
 
     .event-arrow {
-        border-left: 1rem solid white;
+        border-left: 1rem var(--light-grey);
         right: 2.5rem;
     }
 }
@@ -941,11 +940,9 @@ nav {
     flex-direction: column;
     position: relative;
     width: fit-content;
-    /* max-width: 45%; */
     background: var(--charcoal-grey);
     border-radius: 1rem;
     padding: 1rem 1.5rem;
-    /* margin-bottom: 2rem; */
 }
 
 
