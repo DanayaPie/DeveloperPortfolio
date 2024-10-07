@@ -20,8 +20,11 @@ function toggleHamburgerMenu() {
 document.addEventListener("DOMContentLoaded", function () {
 
     handleScrollNavigation(); // Initialized scroll navigation
+
     displaySkills(); // Display all skills by default
     applySkillFilters(); // Display skill by categories and mark category as active
+
+    applyEventCardStyles(); // Display different color styling for work, school, and internship 
 });
 
 
@@ -208,4 +211,98 @@ function setActiveFilter(filterId) {
     if (activeLink) {
         activeLink.classList.add('active');
     };
+};
+
+
+// JOURNEY SECTION
+function applyEventCardStyles() {
+    const cardContainers = document.querySelectorAll('.card-container');
+
+    cardContainers.forEach((container) => {
+        const eventArrow = container.querySelector('.event-arrow');
+        const eventIcon = container.querySelector('.event-icon');
+        const iconText = container.querySelector('.material-symbols-outlined').textContent.trim();
+        const eventCard = container.querySelector('.event-card');
+    })
+
+
+
+
+    // Update event card border to linear gradient
+    eventCard.style.borderImage = `linear-gradient(to right, ${color}, var(--charcoal-grey)) 1`;
+
+    // Update event icon background color
+    eventIcon.style.backgroundColor = color;
+
+    // Update event arrow color
+    eventArrow.style.borderLeft = `1rem solid ${color}`;
+
+
+
+    cardContainers.forEach((cardContainer, index) => {
+
+        const eventArrow = container.querySelector('.event-arrow');
+        const eventIcon = container.querySelector('.event-icon');
+        const iconText = container.querySelector('.material-symbols-outlined').textContent.trim();
+        const eventCard = container.querySelector('.event-card');
+
+        let lightColor = '';
+        let darkColor = '';
+        let oddGradientColor = '';
+        let evenGradientColor = '';
+
+        switch (iconText) {
+            case 'school':
+                oddGradientColor = 'greenBackgroundOdd';
+                evenGradientColor = 'greenBackgroundEven';
+                lightColor = 'rgb(124, 146, 73)';
+                darkColor = 'rgb(74, 86, 47';
+                break;
+
+            case 'work':
+                oddGradientColor = 'blueBackgroundOdd';
+                evenGradientColor = 'blueBackgroundEven';
+                lightColor = 'rgb(80, 128, 173)';
+                darkColor = 'rgb(47, 68, 86)';
+                break;
+
+            case 'edit_document':
+                oddGradientColor = 'greenBackgroundOdd';
+                evenGradientColor = 'greenBackgroundEven';
+                lightColor = 'rgb(154, 74, 122)';
+                darkColor = 'rgb(84, 45, 69)';
+                break;
+
+            default:
+                oddGradientColor = 'rgb(43, 43, 44)';
+                evenGradientColor = 'rgb(43, 43, 44)';
+                lightColor = 'rgb(43, 43, 44)';
+                darkColor = 'rgb(43, 43, 44)';
+        }
+
+
+
+        if ((index + 1) % 2 !== 0) {
+
+            eventArrow.style.borderLeft = `1rem solid ${darkColor}`;
+            eventIcon.style.backgroundColor = lightColor;
+
+            // remove existing even gradient color
+            eventCard.classList.remove(evenGradientColor);
+
+            // add odd gradient color to event-card::before
+            eventCard.classList.add(oddGradientColor);
+
+        } else {
+
+            eventArrow.style.borderLeft = `1rem solid ${darkColor}`;
+            eventIcon.style.backgroundColor = lightColor;
+
+            // remove existing odd gradient color
+            eventCard.classList.remove(oddGradientColor);
+
+            // add even gradient color to event-card::before
+            eventCard.classList.add(evenGradientColor);
+        }
+    });
 };
