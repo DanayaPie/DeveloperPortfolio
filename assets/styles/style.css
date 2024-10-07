@@ -842,7 +842,35 @@ nav {
 }
 
 
+
 /* JOURNEY SECTION */
+
+
+/* Colors stylings */
+/* green */
+.greenBackgroundOdd::before {
+    background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey));
+}
+.greenBackgroundEven::before {
+    background: linear-gradient(to left, rgb(124, 146, 73), var(--charcoal-grey));
+}
+
+/* blue */
+.blueBackgroundOdd::before {
+    background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));
+}
+.blueBackgroundEven::before {
+    background: linear-gradient(to left, rgb(80, 128, 173), var(--charcoal-grey));
+}
+
+/* purple */
+.purpleBackgroundOdd::before {
+    background: linear-gradient(to right, rgb(43, 43, 44), var(--charcoal-grey));
+}
+.purpleBackgroundEven::before {
+    background: linear-gradient(to left, rgb(43, 43, 44), var(--charcoal-grey));
+}
+
 
 #journey {
     display: flex;
@@ -883,8 +911,25 @@ nav {
     top: 1rem;
     width: 2.5rem;
     height: 2.5rem;
+
+    background-color: var(--charcoal-grey);
+
+    
+    /* background-color: rgb(103, 119, 65);
+    background-color: rgb(133, 154, 84);
+    background-color: rgb(74, 86, 47); */
+
+    /* background: rgb(80, 128, 173); 
+    background: rgb(59, 91, 120); 
+    background: rgb(47, 68, 86);  */
+
+    /* background: rgb(154, 74, 122); 
+    background: rgb(125, 63, 101);  */
+    /* background: rgb(84, 45, 69);  */
+
     border-radius: 50%;
-    background-color: var(--pure-white);
+    border: 0.15rem solid;
+    border-color: var(--pure-white);
     z-index: 10;
 }
 
@@ -897,7 +942,10 @@ nav {
 
 .material-symbols-outlined {
     position: absolute;
-    color: rgb(37, 164, 99);
+
+    color: rgb(74, 86, 47);
+    color: var(--pure-white);
+
     z-index: 10;
 }
 
@@ -905,10 +953,19 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
+
     background: var(--charcoal-grey);
+
+    /* background: linear-gradient(to right, rgb(103, 119, 65), var(--charcoal-grey));
+    background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey));
+    background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey)); */
+
+    box-sizing: content-box;
     border-radius: 1rem;
     padding: 1rem 1.5rem;
 }
+
+
 
 .event-title {
     text-align: left;
@@ -948,12 +1005,45 @@ nav {
     padding-left: 3rem;
     left: 50%;
 
+    /* event-card border */
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        
+        /* background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey));  */
+        
+        /* background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));  */
+        /* background: linear-gradient(to right, rgb(59, 91, 120), var(--charcoal-grey));  */
+        /* background: linear-gradient(to right, rgb(47, 68, 86), var(--charcoal-grey));  */
+
+        /* background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(125, 63, 101), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(84, 45, 69), var(--charcoal-grey));  */
+
+        border-radius: inherit;
+        z-index: -1; /* To keep it behind the card */
+    }
+
     .event-icon {
         left: -1.3rem;
     }
 
     .event-arrow {
-        border-right: 1rem solid var(--light-grey);
+
+
+        border-right: 1rem solid var(--charcoal-grey);
+
+        /* border-right: 1rem solid rgb(74, 86, 47);
+        border-right: 1rem solid rgb(47, 71, 93);
+        border-right: 1rem solid rgb(84, 45, 69); */
+
+
         left: 2rem;
     }
 
@@ -965,7 +1055,7 @@ nav {
 }
 
 /* Even event-card to the left */
-.card-container:nth-child(2n-2){
+.card-container:nth-child(2n){
     display: flex;
     justify-content: right;
     padding-right: 3rem;
@@ -984,6 +1074,179 @@ nav {
         text-align: left;
         left: 100%;
         margin-left: 8rem;
+    }
+
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        
+        background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey));
+        background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey));
+        background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey)); 
+        
+        background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(59, 91, 120), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(47, 68, 86), var(--charcoal-grey)); 
+
+        background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(125, 63, 101), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(84, 45, 69), var(--charcoal-grey));
+
+        border-radius: inherit;
+        z-index: -1; /* To keep it behind the card */
+    }
+}
+
+.card-container:nth-child(6) {
+    
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        
+        /* background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey));  */
+        
+        /* background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));  */
+        /* background: linear-gradient(to right, rgb(59, 91, 120), var(--charcoal-grey));  */
+        /* background: linear-gradient(to right, rgb(47, 68, 86), var(--charcoal-grey));  */
+
+        background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); 
+        /* background: linear-gradient(to right, rgb(125, 63, 101), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(84, 45, 69), var(--charcoal-grey));  */
+
+        border-radius: inherit;
+        z-index: -1; /* To keep it behind the card */
+    }
+
+    .event-arrow {
+
+
+        /* border-right: 1rem solid var(--charcoal-grey); */
+
+        border-right: 1rem solid rgb(74, 86, 47);
+        border-right: 1rem solid rgb(47, 71, 93);
+        border-right: 1rem solid rgb(84, 45, 69);
+
+
+        left: 2rem;
+    }
+
+    .event-icon {
+        background: rgb(154, 74, 122); 
+        background: rgb(125, 63, 101);
+        background: rgb(84, 45, 69); 
+    }
+}
+
+
+.card-container:nth-child(1), 
+.card-container:nth-child(2),
+.card-container:nth-child(3),
+.card-container:nth-child(4),
+.card-container:nth-child(7) {
+    
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        
+        /* background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey));  */
+        
+        background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey), var(--charcoal-grey)); 
+        /* background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));  */
+
+        /* background: linear-gradient(to right, rgb(59, 91, 120), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(47, 68, 86), var(--charcoal-grey)); 
+
+        /* background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(125, 63, 101), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(84, 45, 69), var(--charcoal-grey));  */
+
+        border-radius: inherit;
+        z-index: -1; /* To keep it behind the card */
+    }
+
+    .event-arrow {
+
+
+        /* border-right: 1rem solid var(--charcoal-grey); */
+
+        border-right: 1rem solid rgb(74, 86, 47);
+        border-right: 1rem solid rgb(47, 71, 93);
+        /* border-right: 1rem solid rgb(84, 45, 69); */
+
+
+        left: 2rem;
+    }
+
+    .event-icon {
+        background: rgb(74, 86, 47);
+        background: rgb(47, 71, 93);
+        background: rgb(80, 128, 173);
+        /* background: rgb(84, 45, 69);  */
+    }
+}
+
+.card-container:nth-child(5), .card-container:nth-child(8), .card-container:nth-child(9) {
+    
+    .event-card::before {
+        content: "";
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        
+        background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey));
+        background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey), var(--charcoal-grey));
+
+        /* background: linear-gradient(to right, rgb(133, 154, 84), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(74, 86, 47), var(--charcoal-grey));  */
+        
+        /* background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));  */
+        /* background: linear-gradient(to right, rgb(59, 91, 120), var(--charcoal-grey)); */
+        /* background: linear-gradient(to right, rgb(47, 68, 86), var(--charcoal-grey)); 
+
+        /* background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(125, 63, 101), var(--charcoal-grey)); 
+        background: linear-gradient(to right, rgb(84, 45, 69), var(--charcoal-grey));  */
+
+        border-radius: inherit;
+        z-index: -1; /* To keep it behind the card */
+    }
+
+    .event-arrow {
+
+
+        /* border-right: 1rem solid var(--charcoal-grey); */
+
+        border-right: 1rem solid rgb(74, 86, 47);
+        /* border-right: 1rem solid rgb(47, 71, 93); */
+        /* border-right: 1rem solid rgb(84, 45, 69); */
+
+
+        left: 2rem;
+    }
+
+    .event-icon {
+        background: rgb(74, 86, 47);
+        background: rgb(124, 146, 73);
+        /* background: rgb(47, 71, 93); */
+        /* background: rgb(84, 45, 69);  */
     }
 }
 
