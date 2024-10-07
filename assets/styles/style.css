@@ -16,8 +16,15 @@
     --nude-gold: rgb(255, 204, 130);
     --nude-grey: rgb(172, 147, 129); 
     --pure-white: rgb(255, 255, 255);
-    --transition-speed: 200ms ease-in-out;
+    --light-green: rgb(124, 146, 73);
+    --dark-green: rgb(74, 86, 47);
+    --light-blue: rgb(74, 118, 158);
+    --dark-blue: rgb(47, 68, 86);
+    --light-purple: rgb(154, 74, 122);
+    --dark-purple: rgb(84, 45, 69);
 
+    /* animation / transition */
+    --transition-speed: 200ms ease-in-out;
 
     /* size */
     --three-hundred-px: 18.75rem;
@@ -848,26 +855,26 @@ nav {
 /* Colors stylings */
 /* green */
 .greenBackgroundOdd::before {
-    background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey));
+    background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
 }
 .greenBackgroundEven::before {
-    background: linear-gradient(to left, rgb(124, 146, 73), var(--charcoal-grey));
+    background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
 }
 
 /* blue */
 .blueBackgroundOdd::before {
-    background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey));
+    background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
 }
 .blueBackgroundEven::before {
-    background: linear-gradient(to left, rgb(80, 128, 173), var(--charcoal-grey));
+    background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
 }
 
 /* purple */
 .purpleBackgroundOdd::before {
-    background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey));
+    background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
 }
 .purpleBackgroundEven::before {
-    background: linear-gradient(to left, rgb(154, 74, 122), var(--charcoal-grey));
+    background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
 }
 
 
@@ -882,6 +889,7 @@ nav {
     flex-direction: column;
     position: relative;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .timeline-container::after {
@@ -910,7 +918,7 @@ nav {
     top: 1rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--charcoal-grey);
+    /* background-color: var(--charcoal-grey); */
     border-radius: 50%;
     border: 0.15rem solid;
     border-color: var(--pure-white);
@@ -941,6 +949,13 @@ nav {
     padding: 1rem 1.5rem;
 }
 
+.event-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* Adjust this if you want to control where the pseudo-element is placed */
+}
+
 /* Ensure the classes defined below exist and have the correct linear gradient */
 .greenBackgroundOdd::before,
 .greenBackgroundEven::before,
@@ -952,7 +967,7 @@ nav {
     position: absolute;
     top: -0.2rem;
     left: -0.2rem;
-    right: -0.2rem;
+    right: -0.25rem;
     bottom: -0.2rem;
     border-radius: inherit;
     z-index: -1; /* To keep it behind the card */
@@ -996,24 +1011,12 @@ nav {
     padding-left: 3rem;
     left: 50%;
 
-    /* event-card border */
-    .event-card::before {
-        /* border gradient colors */
-        /* background: linear-gradient(to right, rgb(124, 146, 73), var(--charcoal-grey));
-        background: linear-gradient(to right, rgb(80, 128, 173), var(--charcoal-grey)); 
-        background: linear-gradient(to right, rgb(154, 74, 122), var(--charcoal-grey)); */
-        z-index: -1; /* To keep it behind the card */
-    }
-
     .event-icon {
         left: -1.3rem;
     }
 
     .event-arrow {
         border-right: 1rem solid var(--light-grey);
-        /* border-right: 1rem solid rgb(74, 86, 47);
-        border-right: 1rem solid rgb(47, 71, 93);
-        border-right: 1rem solid rgb(84, 45, 69); */
         left: 2rem;
     }
 
@@ -1031,22 +1034,12 @@ nav {
     padding-right: 3rem;
     left: 0;
 
-    .event-card::before {
-        /* border gradient colors */
-        /* background: linear-gradient(to left, rgb(124, 146, 73), var(--charcoal-grey));
-        background: linear-gradient(to left, rgb(80, 128, 173), var(--charcoal-grey)); 
-        background: linear-gradient(to left, rgb(154, 74, 122), var(--charcoal-grey)); */
-    }
-
     .event-icon {
         right: -1.3rem;
     }
 
     .event-arrow {
         border-left: 1rem solid var(--light-grey);
-        /* border-left: 1rem solid rgb(74, 86, 47);
-        border-left: 1rem solid rgb(47, 71, 93);
-        border-left: 1rem solid rgb(84, 45, 69); */
         right: 2rem;
     }
 
