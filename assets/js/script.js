@@ -230,33 +230,42 @@ function applyEventCardStyles() {
         let oddGradientColor = '';
         let evenGradientColor = '';
 
-        switch (iconText) {
-            case 'school':
-                oddGradientColor = 'greenBackgroundOdd';
-                evenGradientColor = 'greenBackgroundEven';
-                lightColor = 'rgb(124, 146, 73)';
-                darkColor = 'rgb(74, 86, 47';
-                break;
+        // Set default values for colors
+        if (!iconText) {
+            lightColor = 'var(--charcoal-grey)';  // Default light color if no text
+            darkColor = 'var(--charcoal-grey)';   // Default dark color if no text
+            oddGradientColor = 'var(--charcoal-grey)'; // Default class for odd background
+            evenGradientColor = 'var(--charcoal-grey)'; // Default class for even background
+        } else {
+            switch (iconText) {
+                case 'school':
+                    oddGradientColor = 'greenBackgroundOdd';
+                    evenGradientColor = 'greenBackgroundEven';
+                    lightColor = 'var(--light-green)';
+                    darkColor = 'var(--dark-green)';
+                    break;
 
-            case 'work':
-                oddGradientColor = 'blueBackgroundOdd';
-                evenGradientColor = 'blueBackgroundEven';
-                lightColor = 'rgb(80, 128, 173)';
-                darkColor = 'rgb(47, 68, 86)';
-                break;
+                case 'work':
+                    oddGradientColor = 'blueBackgroundOdd';
+                    evenGradientColor = 'blueBackgroundEven';
+                    lightColor = 'var(--light-blue)';
+                    darkColor = 'var(--dark-blue)';
+                    break;
 
-            case 'edit_document':
-                oddGradientColor = 'purpleBackgroundOdd';
-                evenGradientColor = 'purpleBackgroundEven';
-                lightColor = 'rgb(154, 74, 122)';
-                darkColor = 'rgb(84, 45, 69)';
-                break;
+                case 'edit_document':
+                    oddGradientColor = 'purpleBackgroundOdd';
+                    evenGradientColor = 'purpleBackgroundEven';
+                    lightColor = 'var(--light-purple)';
+                    darkColor = 'var(--dark-purple)';
+                    break;
 
-            default:
-                oddGradientColor = 'rgb(43, 43, 44)';
-                evenGradientColor = 'rgb(43, 43, 44)';
-                lightColor = 'rgb(43, 43, 44)';
-                darkColor = 'rgb(43, 43, 44)';
+                default:
+                    oddGradientColor = 'var(--charcoal-grey)';
+                    evenGradientColor = 'var(--charcoal-grey)';
+                    lightColor = 'var(--charcoal-grey)';
+                    darkColor = 'var(--charcoal-grey)';
+                    break;
+            }
         }
 
 
@@ -285,6 +294,5 @@ function applyEventCardStyles() {
             eventCard.classList.add(evenGradientColor);
         }
 
-        // eventCard.style.borderImage = `linear-gradient(to right, ${lightColor}, var(--charcoal-grey)) 1`;
     });
 };
