@@ -852,31 +852,7 @@ nav {
 
 /* JOURNEY SECTION */
 
-/* Colors stylings */
-/* green */
-.greenBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
-}
-.greenBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
-}
-
-/* blue */
-.blueBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
-}
-.blueBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
-}
-
-/* purple */
-.purpleBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
-}
-.purpleBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
-}
-
+/* basics */
 
 #journey {
     display: flex;
@@ -910,6 +886,20 @@ nav {
     width: 50%;
 }
 
+
+/* arrows */
+
+.event-arrow {
+    position: absolute;
+    top: 1.3rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    z-index: -1;
+}
+
+
+/* icons */
+
 .event-icon {
     display: flex;
     justify-content: center;
@@ -925,19 +915,14 @@ nav {
     z-index: 10;
 }
 
-.event-arrow {
-    position: absolute;
-    top: 1.3rem;
-    border-top: 1rem solid transparent;
-    border-bottom: 1rem solid transparent;
-    z-index: -1;
-}
-
 .material-symbols-outlined {
     position: absolute;
     color: var(--pure-white);
     z-index: 10;
 }
+
+
+/* event-card */
 
 .event-card {
     display: flex;
@@ -953,7 +938,30 @@ nav {
     content: "";
     position: absolute;
     top: 0;
-    left: 0; /* Adjust this if you want to control where the pseudo-element is placed */
+}
+
+/* green */
+.greenBackgroundOdd::before {
+    background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
+}
+.greenBackgroundEven::before {
+    background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
+}
+
+/* blue */
+.blueBackgroundOdd::before {
+    background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
+}
+.blueBackgroundEven::before {
+    background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
+}
+
+/* purple */
+.purpleBackgroundOdd::before {
+    background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
+}
+.purpleBackgroundEven::before {
+    background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
 }
 
 /* Ensure the classes defined below exist and have the correct linear gradient */
@@ -970,7 +978,7 @@ nav {
     right: -0.25rem;
     bottom: -0.2rem;
     border-radius: inherit;
-    z-index: -1; /* To keep it behind the card */
+    z-index: -1;
 }
 
 .event-title {

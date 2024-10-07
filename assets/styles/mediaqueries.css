@@ -73,6 +73,8 @@
         position: static;
     }
 
+
+    
     /* JOURNEY SECTION */    
     .timeline-container::after {
         left: 0;
@@ -80,30 +82,14 @@
     }
 
     .card-container {
-        width: 90%;
-    } 
-
-    .card-container:nth-child(2n-1) {
-        left: 2rem;
-        justify-content: left;
-    
-        .event-icon {
-            left: -1.15rem;
-        }
-    
-        .event-arrow {
-            border-right: 1rem solid var(--light-grey);
-            left: 2rem;
-        }
-
-        .event-date {
-            text-align: right;
-            margin-right: 0;
-            margin-left: 0;
-        }
+        width: fit-content;
+        max-width: 90%;
+        position: relative;
     }
 
-    .card-container:nth-child(2n-2){
+    /* Make sure the nth-child styles do not override specific backgrounds */
+    .card-container:nth-child(2n-1), 
+    .card-container:nth-child(2n) {
         left: 2rem;
         justify-content: left;
         padding-right: 0;
@@ -112,19 +98,61 @@
         .event-icon {
             left: -1.15rem;
         }
-    
-        .event-arrow {
-            border-left: 0;
-            border-right: 1rem solid var(--light-grey);
-            left: 2rem;
-            right: 100%;
-        }
 
+        .event-arrow {
+            left: 2rem;
+            right: auto;
+            border-left: none;
+            z-index: -1;
+        }
+        
         .event-date {
             text-align: right;
-            margin-right: 0;
-            margin-left: 0;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
-    
+
+
+
+    /* Green Event Type Border */
+    .greenBackgroundOdd::before,
+    .greenBackgroundEven::before {
+        background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    /* Blue Event Type Border */
+    .blueBackgroundOdd::before,
+    .blueBackgroundEven::before {
+        background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    /* Purple Event Type Border */
+    .purpleBackgroundOdd::before,
+    .purpleBackgroundEven::before {
+        background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+        right: -0.2rem;
+        bottom: -0.2rem;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+
 }
