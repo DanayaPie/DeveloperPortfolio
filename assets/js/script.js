@@ -218,33 +218,12 @@ function setActiveFilter(filterId) {
 function applyEventCardStyles() {
     const cardContainers = document.querySelectorAll('.card-container');
 
-    cardContainers.forEach((container) => {
-        const eventArrow = container.querySelector('.event-arrow');
-        const eventIcon = container.querySelector('.event-icon');
-        const iconText = container.querySelector('.material-symbols-outlined').textContent.trim();
-        const eventCard = container.querySelector('.event-card');
-    })
-
-
-
-
-    // Update event card border to linear gradient
-    eventCard.style.borderImage = `linear-gradient(to right, ${color}, var(--charcoal-grey)) 1`;
-
-    // Update event icon background color
-    eventIcon.style.backgroundColor = color;
-
-    // Update event arrow color
-    eventArrow.style.borderLeft = `1rem solid ${color}`;
-
-
-
     cardContainers.forEach((cardContainer, index) => {
 
-        const eventArrow = container.querySelector('.event-arrow');
-        const eventIcon = container.querySelector('.event-icon');
-        const iconText = container.querySelector('.material-symbols-outlined').textContent.trim();
-        const eventCard = container.querySelector('.event-card');
+        const eventArrow = cardContainer.querySelector('.event-arrow');
+        const eventIcon = cardContainer.querySelector('.event-icon');
+        const iconText = cardContainer.querySelector('.material-symbols-outlined').textContent.trim();
+        const eventCard = cardContainer.querySelector('.event-card');
 
         let lightColor = '';
         let darkColor = '';
@@ -267,8 +246,8 @@ function applyEventCardStyles() {
                 break;
 
             case 'edit_document':
-                oddGradientColor = 'greenBackgroundOdd';
-                evenGradientColor = 'greenBackgroundEven';
+                oddGradientColor = 'purpleBackgroundOdd';
+                evenGradientColor = 'purpleBackgroundEven';
                 lightColor = 'rgb(154, 74, 122)';
                 darkColor = 'rgb(84, 45, 69)';
                 break;
@@ -281,14 +260,14 @@ function applyEventCardStyles() {
         }
 
 
-
         if ((index + 1) % 2 !== 0) {
 
-            eventArrow.style.borderLeft = `1rem solid ${darkColor}`;
+            eventArrow.style.borderRight = `1rem solid ${darkColor}`;
             eventIcon.style.backgroundColor = lightColor;
 
             // remove existing even gradient color
             eventCard.classList.remove(evenGradientColor);
+            eventCard.classList.remove(oddGradientColor);
 
             // add odd gradient color to event-card::before
             eventCard.classList.add(oddGradientColor);
@@ -299,10 +278,13 @@ function applyEventCardStyles() {
             eventIcon.style.backgroundColor = lightColor;
 
             // remove existing odd gradient color
+            eventCard.classList.remove(evenGradientColor);
             eventCard.classList.remove(oddGradientColor);
 
             // add even gradient color to event-card::before
             eventCard.classList.add(evenGradientColor);
         }
+
+        // eventCard.style.borderImage = `linear-gradient(to right, ${lightColor}, var(--charcoal-grey)) 1`;
     });
 };
