@@ -226,7 +226,8 @@ function applyEventCardStyles() {
         const eventCard = cardContainer.querySelector('.event-card');
 
         let lightColor = '';
-        let darkColor = '';
+        let oddArrowColor = '';
+        let evenArrowColor = '';
         let oddGradientColor = '';
         let evenGradientColor = '';
 
@@ -234,7 +235,8 @@ function applyEventCardStyles() {
         if (!iconText) {
             // grey
             lightColor = 'var(--charcoal-grey)';
-            darkColor = 'var(--charcoal-grey)';
+            oddArrowColor = 'var(--light-grey)';
+            evenArrowColor = 'var(--light-grey)';
             oddGradientColor = 'var(--charcoal-grey)';
             evenGradientColor = 'var(--charcoal-grey)';
         } else {
@@ -242,7 +244,8 @@ function applyEventCardStyles() {
                 case 'school':
                     // green
                     lightColor = 'var(--light-green)';
-                    darkColor = 'var(--dark-green)';
+                    oddArrowColor = 'greenArrowOdd';
+                    evenArrowColor = 'greenArrowEven';
                     oddGradientColor = 'greenBackgroundOdd';
                     evenGradientColor = 'greenBackgroundEven';
                     break;
@@ -250,7 +253,8 @@ function applyEventCardStyles() {
                 case 'work':
                     // blue
                     lightColor = 'var(--light-blue)';
-                    darkColor = 'var(--dark-blue)';
+                    oddArrowColor = 'blueArrowOdd';
+                    evenArrowColor = 'blueArrowEven';
                     oddGradientColor = 'blueBackgroundOdd';
                     evenGradientColor = 'blueBackgroundEven';
                     break;
@@ -258,7 +262,8 @@ function applyEventCardStyles() {
                 case 'edit_document':
                     // purple
                     lightColor = 'var(--light-purple)';
-                    darkColor = 'var(--dark-purple)';
+                    oddArrowColor = 'purpleArrowOdd';
+                    evenArrowColor = 'purpleArrowEven';
                     oddGradientColor = 'purpleBackgroundOdd';
                     evenGradientColor = 'purpleBackgroundEven';
                     break;
@@ -266,7 +271,8 @@ function applyEventCardStyles() {
                 default:
                     // grey
                     lightColor = 'var(--charcoal-grey)';
-                    darkColor = 'var(--charcoal-grey)';
+                    oddArrowColor = 'var(--light-grey)';
+                    evenArrowColor = 'var(--light-grey)';
                     oddGradientColor = 'var(--charcoal-grey)';
                     evenGradientColor = 'var(--charcoal-grey)';
                     break;
@@ -277,26 +283,33 @@ function applyEventCardStyles() {
         // odd event card
         if ((index + 1) % 2 !== 0) {
 
-            eventArrow.style.borderLeft = 'none';
-            eventArrow.style.borderRight = `1rem solid ${darkColor}`;
             eventIcon.style.backgroundColor = lightColor;
 
-            // remove existing even gradient color
+            // remove existing arrow and gradient colors
+            eventArrow.classList.remove(oddArrowColor);
+            eventArrow.classList.remove(evenArrowColor);
             eventCard.classList.remove(evenGradientColor);
             eventCard.classList.remove(oddGradientColor);
+
+
+            // add odd arrow color to event-arrow
+            eventArrow.classList.add(oddArrowColor);
 
             // add odd gradient color to event-card::before
             eventCard.classList.add(oddGradientColor);
 
         } else {
 
-            eventArrow.style.borderRight = 'none';
-            eventArrow.style.borderLeft = `1rem solid ${darkColor}`;
             eventIcon.style.backgroundColor = lightColor;
 
-            // remove existing odd gradient color
+            // remove existing arrow and gradient colors
+            eventArrow.classList.remove(oddArrowColor);
+            eventArrow.classList.remove(evenArrowColor);
             eventCard.classList.remove(evenGradientColor);
             eventCard.classList.remove(oddGradientColor);
+
+            // add even arrow color to event-arrow
+            eventArrow.classList.add(evenArrowColor);
 
             // add even gradient color to event-card::before
             eventCard.classList.add(evenGradientColor);

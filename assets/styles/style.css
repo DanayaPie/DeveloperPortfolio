@@ -497,6 +497,10 @@ nav {
     margin-bottom: 2rem;
 }
 
+.read-more-detail .section_title-2{
+    text-align: left;
+}
+
 .read-more-image-container {
     display: flex;
     flex-direction: row;
@@ -886,6 +890,50 @@ nav {
     width: 50%;
 }
 
+/* Odd event-card to the right */
+.card-container:nth-child(2n-1) {
+    display: flex;
+    justify-content: left;
+    padding-left: 3rem;
+    left: 50%;
+
+    .event-icon {
+        left: -1.3rem;
+    }
+
+    .event-arrow {
+        left: 1rem;
+    }
+
+    .event-date {
+        text-align: right;
+        right: 100%;
+        margin-right: 8rem;
+    }
+}
+
+/* Even event-card to the left */
+.card-container:nth-child(2n){
+    display: flex;
+    justify-content: right;
+    padding-right: 3rem;
+    left: 0;
+
+    .event-icon {
+        right: -1.3rem;
+    }
+
+    .event-arrow {
+        right: 1rem;
+    }
+
+    .event-date {
+        text-align: left;
+        left: 100%;
+        margin-left: 8rem;
+    }
+}
+
 
 /* arrows */
 
@@ -894,7 +942,35 @@ nav {
     top: 1.3rem;
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
+    border-right: 1rem solid;
+    border-right-color: transparent;
+    border-left: 1rem solid;
+    border-left-color: transparent;
     z-index: -1;
+}
+
+/* green */
+.greenArrowOdd {
+    border-right-color: var(--dark-green);
+}
+.greenArrowEven {
+    border-left-color: var(--dark-green);
+}
+
+/* blue */
+.blueArrowOdd {
+    border-right-color: var(--dark-blue);
+}
+.blueArrowEven {
+    border-left-color: var(--dark-blue);
+}
+
+/* purple */
+.purpleArrowOdd {
+    border-right-color: var(--dark-purple);
+}
+.purpleArrowEven {
+    border-left-color: var(--dark-purple);
 }
 
 
@@ -1012,51 +1088,7 @@ nav {
     color: var(--ash-grey);
 }
 
-/* Odd event-card to the right */
-.card-container:nth-child(2n-1) {
-    display: flex;
-    justify-content: left;
-    padding-left: 3rem;
-    left: 50%;
 
-    .event-icon {
-        left: -1.3rem;
-    }
-
-    .event-arrow {
-        border-right: 1rem solid var(--light-grey);
-        left: 2rem;
-    }
-
-    .event-date {
-        text-align: right;
-        right: 100%;
-        margin-right: 8rem;
-    }
-}
-
-/* Even event-card to the left */
-.card-container:nth-child(2n){
-    display: flex;
-    justify-content: right;
-    padding-right: 3rem;
-    left: 0;
-
-    .event-icon {
-        right: -1.3rem;
-    }
-
-    .event-arrow {
-        border-left: 1rem solid var(--light-grey);
-        right: 2rem;
-    }
-
-    .event-date {
-        text-align: left;
-        left: 100%;
-        margin-left: 8rem;
-    }
-}
 
 
 

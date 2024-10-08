@@ -100,10 +100,8 @@
         }
 
         .event-arrow {
-            left: 2rem;
             right: auto;
-            border-left: none;
-            z-index: -1;
+            left: 1rem;
         }
         
         .event-date {
@@ -113,7 +111,19 @@
         }
     }
 
-
+    /* green arrow */
+    .greenArrowEven {
+        border-left-color: transparent;
+        border-right-color: var(--dark-green);
+    }
+    .blueArrowEven {
+        border-left-color: transparent;
+        border-right-color: var(--dark-blue);
+    }
+    .purpleArrowEven {
+        border-left-color: transparent;
+        border-right-color: var(--dark-purple);
+    }
 
     /* Green Event Type Border */
     .greenBackgroundOdd::before,
