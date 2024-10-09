@@ -659,13 +659,71 @@
 
       <!-- Contact Section -->
       <section id="contact" class="child-section">
-        <h2>Contact</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          obcaecati quis ad ipsam alias repudiandae magni enim facere
-          voluptates, tempore odit voluptate doloribus in aut tempora?
-          Blanditiis nobis culpa fuga?
-        </p>
+        <h1 class="section_title">Contact Me</h1>
+        <div class="contact-container">
+          <div class="get-in-touch">
+            <h2 class="get-in-touch-text">Let's get in touch!</h2>
+            <p class="section_text_p">
+              Want to get to know me, work with me, or just to say hi? Feel free
+              to reach out or fill out the form.
+            </p>
+            <div class="contact-link-container">
+              <div class="social-logo enlarge-image">
+                <img
+                  src="./assets/images-files/about/linkedin.png"
+                  alt="My LinkedIn"
+                  onclick="window.open('https://www.linkedin.com/in/danayapie/', '_blank')"
+                />
+              </div>
+              <div class="social-logo enlarge-image">
+                <img
+                  src="./assets/images-files/about/github.png"
+                  alt="My LinkedIn"
+                  onclick="window.open('https://www.linkedin.com/in/danayapie/', '_blank')"
+                />
+              </div>
+              <div class="social-logo enlarge-image">
+                <a
+                  class="material-symbols-outlined"
+                  alt="My Email"
+                  onclick="window.open('mailto:danaya.pie@gmail.com', '_blank')"
+                  >mail
+                </a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form-container">
+            <h2 class="contact-form-title">Contact Form</h2>
+            <p class="section_text_p">Name:</p>
+            <input
+              class="contact-form-input name-input"
+              placeholder="Full name*"
+              required
+            />
+            <p class="section_text_p">Email:</p>
+            <input
+              class="contact-form-input email-input"
+              placeholder="Email address*"
+              required
+            />
+            <p class="section_text_p">Subject:</p>
+            <input
+              class="contact-form-input subject-input"
+              placeholder="Subject line*"
+              required
+            />
+            <p class="section_text_p">Message:</p>
+            <textarea
+              class="contact-form-input message-input"
+              placeholder="Your message...*"
+              required
+            ></textarea>
+            <button class="btn-color-2 send-message-btn">
+              Send Message
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+        </div>
       </section>
     </section>
   </body>
