@@ -855,9 +855,6 @@ nav {
 
 
 /* JOURNEY SECTION */
-
-/* basics */
-
 #journey {
     display: flex;
     flex-direction: column;
@@ -890,53 +887,29 @@ nav {
     width: 50%;
 }
 
-/* Odd event-card to the right */
-.card-container:nth-child(2n-1) {
+
+/* icon */
+
+.event-icon {
     display: flex;
-    justify-content: left;
-    padding-left: 3rem;
-    left: 50%;
-
-    .event-icon {
-        left: -1.3rem;
-    }
-
-    .event-arrow {
-        left: 1rem;
-    }
-
-    .event-date {
-        text-align: right;
-        right: 100%;
-        margin-right: 8rem;
-    }
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.15rem solid var(--pure-white);
+    z-index: 1;
 }
 
-/* Even event-card to the left */
-.card-container:nth-child(2n){
-    display: flex;
-    justify-content: right;
-    padding-right: 3rem;
-    left: 0;
-
-    .event-icon {
-        right: -1.3rem;
-    }
-
-    .event-arrow {
-        right: 1rem;
-    }
-
-    .event-date {
-        text-align: left;
-        left: 100%;
-        margin-left: 8rem;
-    }
+.material-symbols-outlined {
+    position: absolute;
+    color: var(--pure-white);
+    z-index: 1;
 }
 
-
-/* arrows */
-
+/* arrow */
 .event-arrow {
     position: absolute;
     top: 1.3rem;
@@ -949,104 +922,20 @@ nav {
     z-index: -1;
 }
 
-/* green */
-.greenArrowOdd {
-    border-right-color: var(--dark-green);
-}
-.greenArrowEven {
-    border-left-color: var(--dark-green);
-}
 
-/* blue */
-.blueArrowOdd {
-    border-right-color: var(--dark-blue);
-}
-.blueArrowEven {
-    border-left-color: var(--dark-blue);
-}
-
-/* purple */
-.purpleArrowOdd {
-    border-right-color: var(--dark-purple);
-}
-.purpleArrowEven {
-    border-left-color: var(--dark-purple);
-}
-
-
-/* icons */
-
-.event-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    /* background-color: var(--charcoal-grey); */
-    border-radius: 50%;
-    border: 0.15rem solid;
-    border-color: var(--pure-white);
-    z-index: 10;
-}
-
-.material-symbols-outlined {
-    position: absolute;
-    color: var(--pure-white);
-    z-index: 10;
-}
-
-
-/* event-card */
+/* event card */
 
 .event-card {
     display: flex;
     flex-direction: column;
     position: relative;
     background: var(--charcoal-grey);
-    box-sizing: content-box;
     border-radius: 1rem;
     padding: 1rem 1.5rem;
+    position: relative;
 }
 
 .event-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-}
-
-/* green */
-.greenBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
-}
-.greenBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
-}
-
-/* blue */
-.blueBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
-}
-.blueBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
-}
-
-/* purple */
-.purpleBackgroundOdd::before {
-    background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
-}
-.purpleBackgroundEven::before {
-    background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
-}
-
-/* Ensure the classes defined below exist and have the correct linear gradient */
-.greenBackgroundOdd::before,
-.greenBackgroundEven::before,
-.blueBackgroundOdd::before,
-.blueBackgroundEven::before,
-.purpleBackgroundOdd::before,
-.purpleBackgroundEven::before {
     content: '';
     position: absolute;
     top: -0.2rem;
@@ -1056,6 +945,9 @@ nav {
     border-radius: inherit;
     z-index: -1;
 }
+
+
+/* event info details */
 
 .event-title {
     text-align: left;
@@ -1068,7 +960,7 @@ nav {
     color: var(--light-pink);
 }
 
-.event-card p {
+.event-card .section_text_p {
     margin-bottom: 0.5rem;
 }
 
@@ -1089,6 +981,143 @@ nav {
 }
 
 
+/* odd card positioning */
+
+.odd-card {
+    justify-content: left;
+    padding-left: 3rem;
+    left: 50%;
+}
+
+.odd-card .event-icon {
+    left: -1.3rem;
+}
+
+.odd-card .event-arrow {
+    left: 0.8rem;
+}
+
+.odd-card .event-date {
+    text-align: right;
+    right: 100%;
+    margin-right: 8rem;
+}
+
+
+/* even card positioning */
+
+.even-card {
+    justify-content: right;
+    padding-right: 3rem;
+    left: 0;
+}
+
+.even-card .event-icon {
+    right: -1.3rem;
+}
+
+.even-card .event-arrow {
+    right: 0.7rem;    
+}
+
+.even-card .event-date {
+    text-align: left;
+    left: 100%;
+    margin-left: 8rem;
+}
+
+
+/* event types */
+/* school event - green */
+
+.school-event .event-icon {
+    background-color: var(--light-green);
+}
+
+.school-event.odd-card .event-card::before {
+    background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
+}
+
+.school-event.odd-card .event-arrow {
+    border-right-color: var(--dark-green);
+}
+
+.school-event.even-card .event-card::before {
+    background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
+}
+
+.school-event.even-card .event-arrow {
+    border-left-color: var(--dark-green);
+}
+
+
+/* work event - blue */
+
+.work-event .event-icon {
+    background-color: var(--light-blue);
+}
+
+.work-event.odd-card .event-card::before {
+    background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
+}
+
+.work-event.odd-card .event-arrow {
+    border-right-color: var(--dark-blue);
+}
+
+.work-event.even-card .event-card::before {
+    background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
+}
+
+.work-event.even-card .event-arrow {
+    border-left-color: var(--dark-blue);
+}
+
+
+/* internship event - purple */
+
+.internship-event .event-icon {
+    background-color: var(--light-purple);
+}
+
+.internship-event.odd-card .event-card::before {
+    background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
+}
+
+.internship-event.odd-card .event-arrow {
+    border-right-color: var(--dark-purple);
+}
+
+.internship-event.even-card .event-card::before {
+    background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
+}
+
+.internship-event.even-card .event-arrow {
+    border-left-color: var(--dark-purple);
+}
+
+
+/* default grey theme */
+
+.default-event .event-icon {
+    background-color: var(--charcoal-grey);
+}
+
+.default-event.odd-card .event-card::before {
+    background: linear-gradient(to right, var(--light-grey), var(--charcoal-grey));
+}
+
+.default-event.odd-card .event-arrow {
+    border-right-color: var(--light-grey);
+}
+
+.default-event.even-card .event-card::before {
+    background: linear-gradient(to left, var(--light-grey), var(--charcoal-grey));
+}
+
+.default-event.even-card .event-arrow {
+    border-right-color: var(--light-grey);
+}
 
 
 

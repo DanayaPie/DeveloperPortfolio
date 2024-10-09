@@ -75,94 +75,89 @@
 
 
     
-    /* JOURNEY SECTION */    
+    /* JOURNEY SECTION */
+    
     .timeline-container::after {
         left: 0;
         margin-left: 2rem;
     }
 
     .card-container {
+        display: flex;
+        justify-content: left;
         width: fit-content;
         max-width: 90%;
-        position: relative;
-    }
-
-    /* Make sure the nth-child styles do not override specific backgrounds */
-    .card-container:nth-child(2n-1), 
-    .card-container:nth-child(2n) {
         left: 2rem;
-        justify-content: left;
         padding-right: 0;
         padding-left: 3rem;
-
-        .event-icon {
-            left: -1.15rem;
-        }
-
-        .event-arrow {
-            right: auto;
-            left: 1rem;
-        }
-        
-        .event-date {
-            text-align: right;
-            margin-right: auto;
-            margin-left: auto;
-        }
     }
 
-    /* green arrow */
-    .greenArrowEven {
+
+    /* odd card  positioning */
+
+    .odd-card .event-icon {
+        left: -1.1rem;
+    }
+
+    .odd-card .event-date {
+        margin-right: auto;
+    }
+
+
+    /* even card positioning */
+
+    .even-card .event-icon {
+        left: -1.1rem;
+        right: auto;
+    }
+
+    .even-card .event-arrow {
+        right: auto;
+        left: 0.8rem;
+
+        z-index: 10;
+    }
+
+    .even-card .event-date {
+        text-align: right;
+        right: 100%;
+        left: auto;
+        margin-left: auto;
+    }
+
+
+    /* event types */
+    /* school event - green */
+    .school-event.even-card .event-card::before {
+        background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
+    }
+    
+    .school-event.even-card .event-arrow {
         border-left-color: transparent;
         border-right-color: var(--dark-green);
     }
-    .blueArrowEven {
+
+
+    /* work event - blue */
+
+    .work-event.even-card .event-card::before {
+        background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
+    }
+    
+    .work-event.even-card .event-arrow {
         border-left-color: transparent;
         border-right-color: var(--dark-blue);
     }
-    .purpleArrowEven {
+
+
+    /* internship event - purple */
+    .internship-event.even-card .event-card::before {
+        background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
+    }
+    
+    .internship-event.even-card .event-arrow {
         border-left-color: transparent;
         border-right-color: var(--dark-purple);
     }
-
-    /* Green Event Type Border */
-    .greenBackgroundOdd::before,
-    .greenBackgroundEven::before {
-        background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
-        position: absolute;
-        top: -0.2rem;
-        left: -0.2rem;
-        right: -0.2rem;
-        bottom: -0.2rem;
-        border-radius: inherit;
-        z-index: -1;
-    }
-
-    /* Blue Event Type Border */
-    .blueBackgroundOdd::before,
-    .blueBackgroundEven::before {
-        background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
-        position: absolute;
-        top: -0.2rem;
-        left: -0.2rem;
-        right: -0.2rem;
-        bottom: -0.2rem;
-        border-radius: inherit;
-        z-index: -1;
-    }
-
-    /* Purple Event Type Border */
-    .purpleBackgroundOdd::before,
-    .purpleBackgroundEven::before {
-        background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
-        position: absolute;
-        top: -0.2rem;
-        left: -0.2rem;
-        right: -0.2rem;
-        bottom: -0.2rem;
-        border-radius: inherit;
-        z-index: -1;
-    }
-
-
+    
 }
