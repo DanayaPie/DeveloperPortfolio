@@ -694,30 +694,47 @@
           </div>
           <form class="contact-form-container">
             <h2 class="contact-form-title">Contact Form</h2>
-            <p class="section_text_p">Name:</p>
-            <input
-              class="contact-form-input name-input"
-              placeholder="Full name*"
-              required
-            />
-            <p class="section_text_p">Email:</p>
-            <input
-              class="contact-form-input email-input"
-              placeholder="Email address*"
-              required
-            />
-            <p class="section_text_p">Subject:</p>
-            <input
-              class="contact-form-input subject-input"
-              placeholder="Subject line*"
-              required
-            />
-            <p class="section_text_p">Message:</p>
-            <textarea
-              class="contact-form-input message-input"
-              placeholder="Your message...*"
-              required
-            ></textarea>
+            <!-- name input -->
+            <div class="input-field">
+              <p class="section_text_p">Name:</p>
+              <input
+                class="contact-form-input name-input"
+                autocomplete="off"
+                placeholder="Full name*"
+              />
+              <div class="required-error-text">Required</div>
+            </div>
+            <!-- email input -->
+            <div class="input-field">
+              <p class="section_text_p">Email:</p>
+              <input
+                class="contact-form-input email-input"
+                autocomplete="off"
+                placeholder="Email address*"
+              />
+              <div class="required-error-text">Required</div>
+            </div>
+            <!-- subject input -->
+            <div class="input-field">
+              <p class="section_text_p">Subject:</p>
+              <input
+                class="contact-form-input subject-input"
+                type="email"
+                autocomplete="off"
+                placeholder="Subject line*"
+              />
+              <div class="required-error-text">Required</div>
+            </div>
+            <!-- message textare -->
+            <div class="textarea-field">
+              <p class="section_text_p">Message:</p>
+              <textarea
+                class="contact-form-input message-input"
+                autocomplete="off"
+                placeholder="Your message...*"
+              ></textarea>
+              <div class="required-error-text">Required</div>
+            </div>
             <button class="btn-color-2 send-message-btn">
               Send Message
               <span class="material-symbols-outlined">send</span>
