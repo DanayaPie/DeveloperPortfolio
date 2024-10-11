@@ -1135,27 +1135,53 @@ nav {
     gap: 2rem;
 }
 
-.get-in-touch {
+.get-in-touch-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
 }
 
+.get-in-touch-text {
+    margin-bottom: 1rem;
+}
+
 .contact-link-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    padding-left: 2rem;
+    align-items: left;
     gap: 2rem;
 }
 
-.contact-link-container .material-symbols-outlined {
+.social-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.social-link img, .social-link a {
+    width: 2.5rem;
+}
+
+.social-link p {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.social-link p:hover {
+    font-weight: 500;
+}
+
+.social-link .material-symbols-outlined {
     color: var(--nude-gold);
     font-size: 2.5rem;
     font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
 }
 
-.contact-form-container {
+/* .contact-form-container {
     display: flex;
     flex-direction: column;
     padding: 2rem 3rem;
@@ -1230,4 +1256,4 @@ nav {
 .send-message-btn .material-symbols-outlined {
     transform: rotateY(0deg) rotate(-45deg);
     font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
-}
+} */

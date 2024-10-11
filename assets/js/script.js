@@ -19,12 +19,16 @@ function toggleHamburgerMenu() {
 // EVENT LISTENER
 document.addEventListener("DOMContentLoaded", function () {
 
-    handleScrollNavigation(); // Initialized scroll navigation
+    // Initialized scroll navigation
+    handleScrollNavigation();
 
-    displaySkills(); // Display all skills by default
-    applySkillFilters(); // Display skill by categories and mark category as active
+    // Display all skills by default
+    displaySkills();
+    // Display skill by categories and mark category as active
+    applySkillFilters();
 
-    applyEventCardStyles(); // Display different color styling for work, school, and internship 
+    // Display different color styling for work, school, and internship 
+    applyEventCardStyles();
 });
 
 
@@ -256,3 +260,53 @@ function applyEventCardStyles() {
 
     });
 };
+
+
+// CONTACT SECTION
+// function validateContactForm() {
+//     const nameInput = document.querySelector('.name-input');
+//     const emailInput = document.querySelector('.email-input');
+//     const subjectInput = document.querySelector('.subject-input');
+//     const messageInput = document.querySelector('.message-input');
+
+//     const nameError = nameInput.nextElementSibling;
+//     const emailError = nameInput.nextElementSibling;
+//     const subjectError = nameInput.nextElementSibling;
+//     const messageError = nameInput.nextElementSibling;
+
+//     let isValid = true;
+
+//     // name input blank check
+//     if (nameInput.value.trim() === '') {
+//         nameError.style.display = 'block';
+//         isValid = false;
+//     } else {
+//         nameError.style.display = 'none';
+//     }
+
+//     // email input blank check
+//     if (emailInput.value.trim() === '') {
+//         emailError.style.display = 'block';
+//         isValid = false;
+//     } else {
+//         emailError.style.display = 'none';
+//     }
+
+//     // subject input blank check
+//     if (subjectInput.value.trim() === '') {
+//         subjectError.style.display = 'block';
+//         isValid = false;
+//     } else {
+//         subjectError.style.display = 'none';
+//     }
+
+//     // message input blank check
+//     if (messageInput.value.trim() === '') {
+//         messageError.style.display = 'block';
+//         isValid = false;
+//     } else {
+//         messageError.style.display = 'none';
+//     }
+
+//     return isValid;
+// }
