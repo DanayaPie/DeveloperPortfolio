@@ -308,7 +308,7 @@ nav {
     flex-direction: column;
 }
 
-.home_pic-container {
+.logo-pic-container {
     display: flex;
     height: var(--three-hundred-px);
     margin-bottom: 3rem;
@@ -1133,16 +1133,28 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .get-in-touch-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
 }
 
 .get-in-touch-text {
     margin-bottom: 1rem;
+}
+
+.contact-body-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.contact-body-container .logo-pic-container {
+    margin-bottom: 0;
 }
 
 .contact-link-container {
@@ -1157,22 +1169,31 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 3.5rem;
     width: fit-content;
+    border: solid 2px var(--nude-gold);
+    border-radius: 2rem;
     gap: 1rem;
     cursor: pointer;
 }
 
+.social-link:hover {
+    border-color: var(--light-pink);
+
+    p {
+        color: var(--light-pink);
+    }
+}
+
 .social-link img, .social-link a {
-    width: 2.5rem;
+    width: 2.3rem;
+    margin-left: 1rem;
 }
 
 .social-link p {
     margin-bottom: 0;
+    margin-right: 1rem;
     cursor: pointer;
-}
-
-.social-link p:hover {
-    font-weight: 500;
 }
 
 .social-link .material-symbols-outlined {
