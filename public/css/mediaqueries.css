@@ -1,163 +1,24 @@
-@media screen and (max-width: 950px){
-    
-    /* NAVIGATION BAR */
-    
-    #full-nav {
-        display: none;
-    }
+/* Base styles for mobile devices (default) */
+body {
+    /* Base styles for smallest screens */
+}
 
-    #hamburger-nav {
-        display: flex;
-    }
+/* Tablet Portrait and larger */
+@media (min-width: 768px) {
+    /* Styles for tablets and up */
+}
 
+/* Tablet Landscape and Small Laptops */
+@media (min-width: 1025px) {
+    /* Styles for landscape tablets and small laptops and up */
+}
 
+/* Desktop Small */
+@media (min-width: 1281px) {
+    /* Styles for small desktops and up */
+}
 
-    /* PARENT, CHILD SECTIONS */
-
-    .parent-section {
-        margin: 0 20vw;
-    }
-
-    .child-section {
-        max-width: 90vw;
-    }
-
-    .child-section::after {
-        width: 100%;
-    }
-
-
-
-    /* ABOUT SECTION */
-
-    .about-detail-1 {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .about_pic-container {
-        align-self: center;
-        width: 70%;
-        max-width: 18rem;
-    }
-
-    .about-text-container {
-        width: 100%;
-    }
-
-    .text-container-1 {
-        width: 100%;
-    }
-
-
-
-    /* SKILLS SECTION */
-
-    .code-tech-container {
-        flex-direction: column;
-    }
-
-
-
-    /* PROJECT SECTION */
-
-    .project-carousel {
-        flex-direction: column;
-    }
-
-    .carousel-img {
-        max-height: 15rem;
-    }
-
-    .event-date {
-        position: static;
-    }
-
-
-    
-    /* JOURNEY SECTION */
-    
-    .timeline-container::after {
-        left: 0;
-        margin-left: 2rem;
-    }
-
-    .card-container {
-        display: flex;
-        justify-content: left;
-        width: fit-content;
-        max-width: 90%;
-        left: 2rem;
-        padding-right: 0;
-        padding-left: 3rem;
-    }
-
-
-    /* odd card  positioning */
-
-    .odd-card .event-icon {
-        left: -1.1rem;
-    }
-
-    .odd-card .event-date {
-        margin-right: auto;
-    }
-
-
-    /* even card positioning */
-
-    .even-card .event-icon {
-        left: -1.1rem;
-        right: auto;
-    }
-
-    .even-card .event-arrow {
-        right: auto;
-        left: 0.8rem;
-
-        z-index: 10;
-    }
-
-    .even-card .event-date {
-        text-align: right;
-        right: 100%;
-        left: auto;
-        margin-left: auto;
-    }
-
-
-    /* event types */
-    /* school event - green */
-    .school-event.even-card .event-card::before {
-        background: linear-gradient(to right, var(--light-green), var(--charcoal-grey));
-    }
-    
-    .school-event.even-card .event-arrow {
-        border-left-color: transparent;
-        border-right-color: var(--dark-green);
-    }
-
-
-    /* work event - blue */
-
-    .work-event.even-card .event-card::before {
-        background: linear-gradient(to right, var(--light-blue), var(--charcoal-grey));
-    }
-    
-    .work-event.even-card .event-arrow {
-        border-left-color: transparent;
-        border-right-color: var(--dark-blue);
-    }
-
-
-    /* internship event - purple */
-    .internship-event.even-card .event-card::before {
-        background: linear-gradient(to right, var(--light-purple), var(--charcoal-grey));
-    }
-    
-    .internship-event.even-card .event-arrow {
-        border-left-color: transparent;
-        border-right-color: var(--dark-purple);
-    }
-    
+/* Desktop Large */
+@media (min-width: 1441px) {
+    /* Styles for large desktops and up */
 }

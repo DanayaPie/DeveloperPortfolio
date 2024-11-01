@@ -29,6 +29,10 @@
 
     /* size */
     --three-hundred-px: 18.75rem;
+    --large-header-font-size: 2rem;
+    --small-header-font-size: 1.5rem;
+    --large-p-font-size: 1.2rem;
+    --small-p-font-size: 1rem;
 }
 
 
@@ -56,7 +60,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--dark-grey);
+    background: var(--light-grey);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -66,21 +70,21 @@ body::-webkit-scrollbar-thumb {
 
 /* Font Tags */
 h1 {
-    font-size: 3rem;
+    font-size: var(--large-header-font-size);
     font-weight: 400;
     color: var(--pure-white);
     cursor: default;
 }
 
 h2, h3, h4 {
-    font-size: 2rem;
+    font-size: var(--small-header-font-size);
     font-weight: 500;
     color: var(--burgundy-pink);
     cursor: default;
 }
 
 p {
-    font-size: 1rem;
+    font-size: var(--p-font-size);
     color: var(--ash-grey);
     cursor: default;
 }
@@ -124,14 +128,14 @@ nav {
 .nav-title {
     padding: 1rem;
     color: var(--pure-white);
-    font-size: 1.5rem;
+    font-size: var(--small-header-font-size);
     cursor: default;
 }
 
 
 /* Full Nav */
 .full-nav-links {
-    display: flex;
+    display: none;
     margin: 0;
     padding: 1rem;
     gap: 2rem;
@@ -160,7 +164,7 @@ nav {
 
 /* Hamburger Nav */
 #hamburger-nav {
-    display: none;
+    display: flex;
 }
 
 
@@ -243,7 +247,7 @@ nav {
     padding: .5rem;
     transition: var(--transition-speed);
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--small-p-font-size);
     color: var(--pure-white);
     text-decoration: none;
 }
@@ -274,6 +278,7 @@ nav {
     align-items: center;
     align-content: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .child-section {
@@ -283,7 +288,7 @@ nav {
     padding-bottom: 3rem;
     height: fit-content;
     min-height: 100vh;
-    max-width: 50vw;
+    max-width: 90vw;
     align-content: center;
     align-items: center;
     transition: var(--transition-speed);
@@ -359,7 +364,7 @@ nav {
     padding-right: 1rem;
     width: fit-content;
     border: 1px solid;
-    font-size: 1rem;
+    font-size: var(--small-p-font-size);
     border-radius: 1.5rem;
     font-weight: 500;
     cursor: pointer;
@@ -467,7 +472,7 @@ nav {
 }
 
 .highlight-text {
-    font-size: 1.25rem;
+    font-size: var(--large-p-font-size);
     font-weight: 400;
     color: var(--light-pink);
 }
@@ -570,7 +575,7 @@ nav {
 
 .filter-skills h2 {
     margin-right: 0.5rem;
-    font-size: 1.50rem;
+    font-size: var(--large-p-font-size);
     font-weight: 500;
     padding: 0.75rem;
 }
@@ -598,7 +603,7 @@ nav {
 }
 
 .filter-options a {
-    font-size: 1rem;
+    font-size: var(--small-p-font-size);
     font-weight: 400;
     color: var(--ash-grey);
     text-decoration: none;
@@ -715,7 +720,7 @@ nav {
 
 .contributors_text {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: var(--large-p-font-size);
     font-weight: 500;
     color: var(--light-pink);
 }
@@ -954,7 +959,7 @@ nav {
 
 .event-title {
     text-align: left;
-    font-size: 1.3rem;
+    font-size: var(--large-p-font-size);
     margin-bottom: 0;
 }
 
@@ -968,7 +973,7 @@ nav {
 }
 
 .section_text_list {
-    font-size: 1rem;
+    font-size: var(--small-p-font-size);
     color: var(--ash-grey);
     list-style-position: inside;
     cursor: default;
