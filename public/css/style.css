@@ -1176,7 +1176,7 @@ nav {
 
 .contact-body-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     gap: 4rem;
@@ -1190,7 +1190,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     gap: 2rem;
 }
 
