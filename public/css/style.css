@@ -139,7 +139,16 @@ nav {
 }
 
 /* Title */
+.nav-title-short {
+    display: flex;
+    padding: 1rem;
+    color: var(--pure-white);
+    font-size: var(--small-header-font-size);
+    cursor: default;
+}
+
 .nav-title {
+    display: none;
     padding: 1rem;
     color: var(--pure-white);
     font-size: var(--small-header-font-size);
