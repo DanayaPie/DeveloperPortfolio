@@ -1,24 +1,103 @@
-/* Base styles for mobile devices (default) */
-body {
-    /* Base styles for smallest screens */
+/* Tablet Portrait: 768px */
+@media screen and (min-width: 768px) {
+
+    :root {
+        --child-section-width: 85vw;
+    }
+
+
+    /* NAV BAR */
+    .nav-title-short {
+        display: none;
+    }
+
+    .nav-title {
+        display: flex;
+    }
+
+
+    /* HOME SECTION */
+    .logo-pic-container {
+        height: var(--two-fifty-px);
+    }
+
+
+    /* ABOUT SECTION */
+    .about_pic-container {
+        max-width: var(--two-fifty-px);
+    }
+
+
+
+    /* READ MORE SECTION */
+    .read-more-img {
+        max-width: var(--two-fifty-px);
+    }
+
+
+    /* PROJECT SECTION */
+    .project-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .code-tech-container {
+        flex-direction: row;
+    }
+
+    .source-code-btn {
+        display: flex;
+        flex-direction: row;
+        align-self: top;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .tech-container {
+        height: fit-content;
+        width: 60%;
+    }
+    
+
+    .carousel-container {
+        flex-direction: row;
+    }
+
+    .carousel-img {
+        max-width: var(--three-fifty-px);
+    }
+
+
+    /* CONTACT SECTION */
+    .contact-body-container {
+        flex-direction: row;
+    }
+
+    .contact-body-container .logo-pic-container {
+        max-width: var(--two-fifty-px);
+    }
+
 }
 
-/* Tablet Portrait and larger */
-@media (min-width: 768px) {
-    /* Styles for tablets and up */
+/* Tablet Landscape / Small Laptops: 1024px */
+@media screen and (min-width: 1024px) {
+
+    :root {
+        --child-section-width: 80vw;
+    }
 }
 
-/* Tablet Landscape and Small Laptops */
-@media (min-width: 1025px) {
-    /* Styles for landscape tablets and small laptops and up */
+/* Desktop Small: 1280px */
+@media screen and (min-width: 1280px) {
+
+    :root {
+        --child-section-width: 70vw;
+    }
 }
 
-/* Desktop Small */
-@media (min-width: 1281px) {
-    /* Styles for small desktops and up */
-}
-
-/* Desktop Large */
-@media (min-width: 1441px) {
-    /* Styles for large desktops and up */
+/* Desktop Large: 1440px and above */
+@media screen and (min-width: 1440px) {
+    
+    :root {
+        --child-section-width: 60vw;
+    }
 }
