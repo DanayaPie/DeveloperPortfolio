@@ -27,8 +27,15 @@
     /* animation / transition */
     --transition-speed: 200ms ease-in-out;
 
-    /* size */
+    /* px to rem size */
+    --fifty-px: 3.125rem;
+    --one-hundred-px: 6.25rem;
+    --one-fifty-px: 9.375rem;
+    --two-hundred-px: 12.5rem;    
+    --two-fifty-px: 15.625rem;
     --three-hundred-px: 18.75rem;
+
+    /* font size */
     --large-header-font-size: 2rem;
     --small-header-font-size: 1.5rem;
     --large-p-font-size: 1.2rem;
@@ -315,7 +322,7 @@ nav {
 
 .logo-pic-container {
     display: flex;
-    height: var(--three-hundred-px);
+    height: var(--two-hundred-px);
     margin-bottom: 3rem;
 }
 
@@ -379,6 +386,7 @@ nav {
 
 .social-btn {
     width: 8rem;
+    font-size: var(--small-p-font-size);
 }
 
 .btn-color-1 {
@@ -411,7 +419,6 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    height: 2.5rem;
     width: 10rem;
     gap: 2rem;
 }
