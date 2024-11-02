@@ -141,9 +141,15 @@ function displaySkills(filter = 'All') {
 
         let filteredSkills = [];
         if (filter === 'All') {
-            // Gather all skills from each category
+            // Gather all skills from each category, removing duplicates by name
+            const uniqueSkills = new Set();
             Object.keys(skills).forEach(category => {
-                filteredSkills = filteredSkills.concat(skills[category]);
+                skills[category].forEach(skill => {
+                    if (!uniqueSkills.has(skill.name)) {
+                        uniqueSkills.add(skill.name);
+                        filteredSkills.push(skill);
+                    }
+                });
             });
         } else if (skills[filter]) {
             // Get skills from the specific category
