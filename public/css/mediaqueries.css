@@ -84,7 +84,121 @@
     :root {
         --child-section-width: 80vw;
     }
+
+    /* NAV BAR */
+    #hamburger-nav {
+        display: none;
+    }
+
+    .full-nav-links {
+        display: flex;
+    }
+
+
+    /* HOME SECTION */
+    .logo-pic-container {
+        height: var(--three-hundred-px);
+    }
+
+
+    /* ABOUT SECTION */
+    .about-detail-1 {
+        flex-direction: row;
+    }
+
+    .about-text-container {
+        width: 80%;
+    }
+
+
+    /* JOURNEY SECTION */
+    .timeline-container::after {
+        left: 50%;
+        margin-left: -0.15rem;
+    }
+
+    .card-container {
+        width: 50%;
+    }
+
+    /* odd cards positioning */
+    .odd-card {
+        left: 50%;
+    }
+
+    .odd-card .event-icon {
+        left: -1.25rem;
+    }
+
+    .odd-card .event-date {
+        position: absolute;
+        width: 100;
+        top: 1.5rem;
+        font-weight: 500;
+        right: 100%;
+        margin-right: 6.5rem;
+    }
+
+    /* even cards positioning */
+    .even-card {
+        justify-content: right;
+        padding-right: 3rem;;
+        padding-left: 0rem;
+        left: 0;
+        right: auto;
+    }
+
+    .even-card .event-icon {
+        left: auto;
+        right: -1.25rem;
+    }
+
+    .even-card .event-arrow {
+        right: 0.8rem;
+        left: auto;
+    }
+
+    .even-card .event-date {
+        position: absolute;
+        text-align: left;
+        width: 100%;
+        right: auto;
+        left: 100%;
+        margin-left: 6.5rem;
+    }
+
+    /* event types */
+    /* school event -green */
+    .school-event.even-card .event-card::before {
+        background: linear-gradient(to left, var(--light-green), var(--charcoal-grey));
+    }
+    
+    .school-event.even-card .event-arrow {
+        border-right-color: transparent;
+        border-left-color: var(--dark-green);
+    }
+
+    /* work event - blue */
+    .work-event.even-card .event-card::before {
+        background: linear-gradient(to left, var(--light-blue), var(--charcoal-grey));
+    }
+    
+    .work-event.even-card .event-arrow {
+        border-right-color: transparent;
+        border-left-color: var(--dark-blue);
+    }
+
+    /* internship event - purple */
+    .internship-event.even-card .event-card::before {
+        background: linear-gradient(to left, var(--light-purple), var(--charcoal-grey));
+    }
+    
+    .internship-event.even-card .event-arrow {
+        border-right-color: transparent;
+        border-left-color: var(--dark-purple);
+    }
 }
+
 
 /* Desktop Small: 1280px */
 @media screen and (min-width: 1280px) {
@@ -98,6 +212,6 @@
 @media screen and (min-width: 1440px) {
     
     :root {
-        --child-section-width: 60vw;
+        --child-section-width: 55vw;
     }
 }

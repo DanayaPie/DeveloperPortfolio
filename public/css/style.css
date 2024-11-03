@@ -472,6 +472,7 @@ nav {
     justify-content: center;
     height: fit-content;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .about_pic-container {
@@ -492,6 +493,10 @@ nav {
 
 .about-text-container h2 {
     text-align: left;
+}
+
+.about-text-container p {
+    margin-bottom: 0;
 }
 
 .highlight-text {
@@ -1054,7 +1059,6 @@ nav {
 .even-card .event-arrow {
     right: auto;
     left: 0.8rem;
-    z-index: 10;
 }
 
 .even-card .event-date {
