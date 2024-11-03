@@ -1010,6 +1010,7 @@ nav {
     color: var(--ash-grey);
     list-style-position: inside;
     cursor: default;
+    padding: 0 0.5rem;
     margin-bottom: 0.5rem;
 }
 
