@@ -56,6 +56,9 @@ function handleScrollNavigation() {
                     document.querySelector('.nav-links a[href*=' + id + ']').classList.add('active');
                     document.querySelector('.hamburger-links a[href*=' + id + ']').classList.add('active');
                 });
+
+                // Change the URL without refreshing the page
+                history.pushState(null, null, `#${id}`);
             };
 
         });
