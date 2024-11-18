@@ -1,4 +1,6 @@
 # Danaya "Pie" Chusuwan
 
 Welcome to my developer portfolio repository. Visit my live portfolio here at
-[danayapie.com](https://www.danayapie.com)
+[danayapie.com](https://www.danayapie.com).
+
+This portfolio used JS, HTML, and CSS.
