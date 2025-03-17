@@ -1325,7 +1325,58 @@ nav {
 
 
 
+/* 404 ERROR SECTION */
+#not-found-error {
+    display: flex;
+    flex-direction: column;
+}
 
+.error-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.error-message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.error-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.error-message {
+    margin-bottom: 0;
+    padding: 0;
+    text-align: left;
+    font-size: var(--large-p-font-size);
+}
+
+.error-message a {
+    color: var(--light-pink);
+}
+
+.explanation-text {
+    font-weight: 700;
+}
+
+.error-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.flip-table-text {
+    font-size: 3rem;
+}
 
 
 
