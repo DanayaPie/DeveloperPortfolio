@@ -75,7 +75,6 @@
     .contact-body-container .logo-pic-container {
         max-width: var(--two-fifty-px);
     }
-
 }
 
 /* Tablet Landscape / Small Laptops: 1024px */
@@ -196,6 +195,11 @@
     .internship-event.even-card .event-arrow {
         border-right-color: transparent;
         border-left-color: var(--dark-purple);
+    }
+
+    /* CONTACT SECTION */
+    .error-container {
+        flex-direction: row;
     }
 }
 

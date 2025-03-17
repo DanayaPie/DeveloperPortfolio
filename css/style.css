@@ -540,6 +540,8 @@ nav {
 .read-more-image-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     margin-bottom: 4rem;
@@ -1333,7 +1335,7 @@ nav {
 
 .error-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 3rem;
     margin-bottom: 2rem;
 }
