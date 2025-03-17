@@ -1330,7 +1330,11 @@ nav {
 /* 404 ERROR SECTION */
 #not-found-error {
     display: flex;
+    height: 100vh;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .error-container {
