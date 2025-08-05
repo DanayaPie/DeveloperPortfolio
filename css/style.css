@@ -995,7 +995,7 @@ nav {
 .event-title {
     text-align: left;
     font-size: var(--large-p-font-size);
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 .event-info {

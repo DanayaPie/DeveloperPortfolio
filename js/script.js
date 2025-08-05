@@ -127,7 +127,10 @@ function getSkills() {
         Tools: [
             { name: 'DBeaver', image: 'dbeaver.png' },
             { name: 'Lucidchart', image: 'lucidchart.png' },
-            { name: 'Draw.io', image: 'drawio.png' }
+            { name: 'Draw.io', image: 'drawio.png' },
+            { name: 'PeopleSoft', image: 'peoplesoft.png' },
+            { name: 'SuccessFactors', image: 'sap.png' },
+            { name: 'Taleo', image: 'taleo.png' }
         ]
     };
 };
