@@ -124,13 +124,16 @@ function getSkills() {
             { name: 'Postman', image: 'postman.png' }
         ],
 
-        Tools: [
-            { name: 'DBeaver', image: 'dbeaver.png' },
-            { name: 'Lucidchart', image: 'lucidchart.png' },
-            { name: 'Draw.io', image: 'drawio.png' },
+        EnterprisePlatforms: [
             { name: 'PeopleSoft', image: 'peoplesoft.png' },
             { name: 'SuccessFactors', image: 'sap.png' },
             { name: 'Taleo', image: 'taleo.png' }
+        ],
+
+        Tools: [
+            { name: 'DBeaver', image: 'dbeaver.png' },
+            { name: 'Lucidchart', image: 'lucidchart.png' },
+            { name: 'Draw.io', image: 'drawio.png' }
         ]
     };
 };
@@ -201,6 +204,7 @@ function applySkillFilters() {
         'filter-fra-lib': 'FrameworksAndLibraries',
         'filter-test': 'TestingAndAutomation',
         'filter-dev': 'DevOps',
+        'filter-enterprise': 'EnterprisePlatforms',
         'filter-tools': 'Tools',
     };
 
