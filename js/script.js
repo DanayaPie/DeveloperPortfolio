@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display all skills by default
     displaySkills();
+
     // Display skill by categories and mark category as active
     applySkillFilters();
 
@@ -87,13 +88,7 @@ function getSkills() {
             { name: 'Java', image: 'java.png' },
             { name: 'Python', image: 'python.png' },
             { name: 'JavaScript', image: 'javascript.png' },
-            { name: 'SQL', image: 'sql.png' }
-        ],
-
-        WebDevelopment: [
-            { name: 'JavaScript', image: 'javascript.png' },
-            { name: 'HTML', image: 'html.png' },
-            { name: 'CSS', image: 'css.png' }
+            { name: 'TypeScript', image: 'typescript.png' }
         ],
 
         Databases: [
@@ -109,10 +104,11 @@ function getSkills() {
         ],
 
         TestingAndAutomation: [
+            { name: 'Playwright', image: 'playwright.png' },
             { name: 'Selenium', image: 'selenium.png' },
+            { name: 'Cucumber', image: 'cucumber.png' },
             { name: 'JUnit 5', image: 'junit5.png' },
             { name: 'Mockito', image: 'mockito.png' },
-            { name: 'Cucumber', image: 'cucumber.png' },
             { name: 'Postman', image: 'postman.png' }
         ],
 
@@ -120,8 +116,7 @@ function getSkills() {
             { name: 'Git', image: 'git.png' },
             { name: 'Jenkins', image: 'jenkins.png' },
             { name: 'Maven', image: 'maven.png' },
-            { name: 'Jira', image: 'jira.png' },
-            { name: 'Postman', image: 'postman.png' }
+            { name: 'Jira', image: 'jira.png' }
         ],
 
         EnterprisePlatforms: [
@@ -245,7 +240,7 @@ function applyEventCardStyles() {
         const eventCard = cardContainer.querySelector('.event-card');
 
         // Reset any previously assigned classes
-        cardContainer.classList.remove('school-event', 'work-event', 'internship-event', 'odd-card', 'even-card');
+        cardContainer.classList.remove('school-event', 'work-event', 'internship-event', 'cert-event', 'odd-card', 'even-card');
 
         // Assign event types classes based on the iconText
         switch (iconText) {
@@ -259,6 +254,10 @@ function applyEventCardStyles() {
 
             case 'edit_document':
                 cardContainer.classList.add('internship-event');
+                break;
+
+            case 'license':
+                cardContainer.classList.add('cert-event');
                 break;
 
             default:

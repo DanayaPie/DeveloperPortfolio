@@ -13,7 +13,8 @@
     --burgundy-red: rgba(189, 34, 47, 0.809);
     --burgundy-pink: rgb(193, 86, 102);
     --light-pink: rgb(233, 160, 169);
-    --dark-gold: rgb(210, 161, 87);
+    --dark-gold: rgb(143, 109, 59);
+    --light-gold: rgb(210, 161, 87);
     --nude-gold: rgb(255, 204, 130);
     --nude-grey: rgb(172, 147, 129); 
     --pure-white: rgb(255, 255, 255);
@@ -408,7 +409,7 @@ nav {
 
 .btn-color-1 {
     color: var(--dark-grey);
-    background-color: var(--dark-gold);
+    background-color: var(--light-gold);
     border-color: var(--nude-gold);
 }
 
@@ -1142,6 +1143,30 @@ nav {
 .internship-event.even-card .event-arrow {
     border-left-color: transparent;
     border-right-color: var(--dark-purple);
+}
+
+
+/* certificate event - gold */
+
+.cert-event .event-icon {
+    background-color: var(--light-gold);
+}
+
+.cert-event.odd-card .event-card::before {
+    background: linear-gradient(to right, var(--light-gold), var(--charcoal-grey));
+}
+
+.cert-event.odd-card .event-arrow {
+    border-right-color: var(--dark-gold);
+}
+
+.cert-event.even-card .event-card::before {
+    background: linear-gradient(to right, var(--light-gold), var(--charcoal-grey));
+}
+
+.cert-event.even-card .event-arrow {
+    border-left-color: transparent;
+    border-right-color: var(--dark-gold);
 }
 
 

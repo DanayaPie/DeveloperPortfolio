@@ -197,6 +197,16 @@
         border-left-color: var(--dark-purple);
     }
 
+    /* certificate event - gold */
+    .cert-event.even-card .event-card::before {
+        background: linear-gradient(to left, var(--light-gold), var(--charcoal-grey));
+    }
+    
+    .cert-event.even-card .event-arrow {
+        border-right-color: transparent;
+        border-left-color: var(--dark-gold);
+    }
+
     /* CONTACT SECTION */
     .error-container {
         flex-direction: row;
